@@ -8,7 +8,7 @@ De app is om te **oefenen**. Voor **punten in Teams** gebruik je BookWidgets: ee
 
 | Hoofdstuk | Gemakkelijk | Moeilijk | Doordenker |
 |---|---|---|---|
-| 1 Basis | 26 vragen | 25 vragen | 35 vragen |
+| 1 Basis | 26 vragen | 25 vragen | 36 vragen |
 | 2 Schakelingen in huis | 14 | 20 | 26 |
 | 3 Schema's en symbolen | 7 | 3 | 8 |
 | 4 Duurzame energie | 19 | 22 | 19 |

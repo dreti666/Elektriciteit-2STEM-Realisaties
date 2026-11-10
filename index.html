@@ -635,7 +635,7 @@ const MODS=[
   {titel:'Dit pictogram ken je',beeld:()=>picto(150),tekst:['Een gele driehoek met een bliksem.','Dit betekent: gevaar, elektrische spanning.','Zie je dit pictogram? Blijf eraf. Vraag het aan de leraar.']},
   {titel:'Werken aan een installatie: 3 stappen',tekst:['<b>1.</b> Zet de spanning uit. Zet de <span class="woord">automaat</span> of <span class="woord">zekering</span> uit.','<b>2.</b> Zorg dat niemand de spanning terug aanzet. Hang een slot of een bordje.','<b>3.</b> Test met een <span class="woord">spanningstester</span>: is er echt geen spanning meer?','Pas dan mag je werken.']},
   {titel:'Zo werk je veilig',tekst:['Werk altijd met droge handen.','Een kabel is kapot? Gebruik hem niet. Zeg het aan de leraar.','Gebruik gereedschap met isolatie (VDE, 1000 V).','Trek aan de stekker, niet aan de kabel.','Twijfel je? Stop en vraag het aan de leraar.']},
-  {titel:'AREI: de differentieelschakelaar',arei:true,tekst:['Het <span class="woord">AREI</span> is het reglement voor elektrische installaties in België.','Elke woning heeft een <span class="woord">differentieelschakelaar</span>. Die schakelt uit als er stroom weglekt, bijvoorbeeld door jouw lichaam.','Voor het hele huis: 300 mA.','Extra voor de badkamer, de wasmachine, de droogkast en de vaatwasser: 30 mA.','Druk regelmatig op de testknop.']}
+  {titel:'AREI: de differentieelschakelaar',arei:true,tekst:['Het <span class="woord">AREI</span> is het Algemeen Reglement op de Elektrische Installaties: de regels voor elektriciteit in België.','Elke woning heeft een <span class="woord">differentieelschakelaar</span>. Die schakelt uit als er stroom weglekt, bijvoorbeeld door jouw lichaam.','Voor het hele huis, aan het begin van de installatie: 300 mA.','Extra voor de badkamer, de wasmachine, de droogkast en de vaatwasser: 30 mA.','Nieuwe woning (sinds juni 2023)? Dan komen ook de stopcontacten en de verlichting achter een differentieel van 30 mA. Maximaal 8 kringen per differentieel van 30 mA.','Druk regelmatig op de testknop.']}
  ],
  oef:[
   {type:'mc',vraag:'Wat betekent dit pictogram?',beeld:()=>picto(120),opties:['Gevaar: elektrische spanning','Hier is een stopcontact','Hier mag je opladen'],juist:0,uitleg:'De gele driehoek met bliksem betekent: gevaar, elektrische spanning.'},
@@ -769,13 +769,13 @@ const MODS=[
 {id:'kleuren',hfst:'huis',titel:'Kleuren en kabeldiktes',lpd:['LPD 1','LPD 3'],ico:'kleuren',
  leren:[
   {titel:'Kleuren hebben een betekenis',tekst:['In een huis hebben de draden vaste kleuren.','Zo weet iedereen wat elke draad doet.','Kleuren nooit wisselen!']},
-  {titel:'Fasedraad (L, +)',beeld:()=>draad('bruin')+draad('rood'),tekst:['Bruin (of rood): dat is de <span class="woord">fasedraad</span>. Men zegt ook lijndraad.','Letter: <b>L</b>. In het schema: <b>+</b>.','Op de fasedraad staat spanning.']},
+  {titel:'Fasedraad (L, +)',beeld:()=>draad('bruin')+draad('rood'),tekst:['Bruin: dat is de <span class="woord">fasedraad</span>. In oudere installaties is hij soms rood. Men zegt ook lijndraad.','Letter: <b>L</b>. In het schema: <b>+</b>.','Op de fasedraad staat spanning.']},
   {titel:'Nuldraad (N, −)',beeld:()=>draad('blauw'),tekst:['Blauw: dat is de <span class="woord">nuldraad</span>. Men zegt ook neuter.','Letter: <b>N</b>. In het schema: <b>−</b>.','De nuldraad gaat rechtstreeks naar de lamp, niet via de schakelaar.']},
   {titel:'Aarding (A)',beeld:()=>draad('geelgroen'),tekst:['Geel-groen: dat is de <span class="woord">aarding</span>. Letter: <b>A</b> (of PE).','De aarding gaat rechtstreeks naar de lamp, voor metalen armaturen.','De aarding beschermt jou als er iets misloopt.']},
   {titel:'Schakeldraad (S)',beeld:()=>draad('zwart'),tekst:['Zwart: dat is de <span class="woord">schakeldraad</span>. Letter: <b>S</b>.','De schakeldraad loopt van de schakelaar naar de lamp, of tussen twee schakelaars.','Een schakeldraad mag ook een andere kleur hebben.','Maar <b>nooit</b>: bruin/rood, blauw of geel-groen.']},
-  {titel:'AREI: kleuren',arei:true,tekst:['Geel-groen is altijd en alleen voor de aarding.','Blauw gebruik je voor de nuldraad.','Ook een blauwe draad kan gevaarlijk zijn. Test altijd met een tweepolige spanningstester.']},
+  {titel:'AREI: kleuren',arei:true,tekst:['Geel-groen is altijd en alleen voor de aarding.','Blauw gebruik je voor de nuldraad.','De andere kleuren, zoals bruin, zwart en grijs, zijn voor de fasedraad en de schakeldraad.','Onze afspraak in de les: bruin = fasedraad, zwart = schakeldraad.','Ook een blauwe draad kan gevaarlijk zijn. Test altijd met een tweepolige spanningstester.']},
   {titel:'De dikte van een draad',beeld:()=>doorsnedes(),tekst:['De dikte van een draad is de <span class="woord">doorsnede</span>. Die meet je in mm².','Een dikkere draad kan meer stroom aan.','Is een draad te dun? Dan wordt hij warm. Er kan brand ontstaan.']},
-  {titel:'AREI: welke draad, welke automaat?',arei:true,tabel:[['Kring','Draad','Automaat'],['Verlichting','1,5 mm²','max. 16 A'],['Stopcontacten','2,5 mm²','max. 20 A']],tekst:['De automaat past altijd bij de draad.','Op een kring met stopcontacten: maximaal 8 stopcontacten.','Zware toestellen, zoals een kookplaat, krijgen een dikkere draad, bijvoorbeeld 6 mm².']},
+  {titel:'AREI: welke draad, welke automaat?',arei:true,tabel:[['Kring','Draad','Automaat'],['Alleen verlichting','1,5 mm²','max. 16 A'],['Stopcontacten','2,5 mm²','max. 20 A'],['Verlichting + stopcontacten','2,5 mm²','max. 20 A']],tekst:['De automaat past altijd bij de draad.','Op een kring met stopcontacten: maximaal 8 stopcontacten. Een dubbel stopcontact telt als 1.','Zware toestellen, zoals een kookplaat, krijgen een dikkere draad, bijvoorbeeld 6 mm².']},
   {titel:'Draad of kabel?',tekst:['<b>VOB</b>: één losse draad. Die steek je altijd in een buis.','<b>XVB</b>: een kabel. Daarin zitten meerdere draden in een stevige mantel.']}
  ],
  oef:[
@@ -838,7 +838,8 @@ const MODS=[
 {id:'dubbelpolig',hfst:'huis',titel:'Dubbelpolige schakeling',lpd:['LPD 4','LPD 14'],ico:'h_dubbel',
  leren:[
   {titel:'Wat is het?',tekst:['Eén schakelaar bedient één lamp of lampgroep, vanaf één plaats.','Hij onderbreekt de fasedraad <b>én</b> de nuldraad (neuter) tegelijk.','Zo is de lamp helemaal spanningsvrij.']},
-  {titel:'Waar gebruik je het?',arei:true,tekst:['In badkamers (verplicht volgens het AREI).','In wasruimtes, bij buitenverlichting, in vochtige en natte ruimtes.','Als de lamp helemaal spanningsvrij moet zijn voor onderhoud.']},
+  {titel:'Waar gebruik je het?',arei:true,tekst:['In badkamers. Het AREI verplicht het niet meer (vroeger wel), maar het is wel de veiligste keuze.','In wasruimtes, bij buitenverlichting, in vochtige en natte ruimtes.','Als de lamp helemaal spanningsvrij moet zijn voor onderhoud.']},
+  {titel:'AREI: schakelaars in de badkamer',arei:true,tekst:['Geen schakelaar in of boven het bad of de douche.','Een schakelaar in de badkamer is spatwaterdicht (IP44).','Alle kringen van de badkamer zitten achter een differentieel van 30 mA.','Het veiligst: zet de schakelaar buiten de badkamer.']},
   {titel:'De aansluitklemmen',tekst:['Een dubbelpolige schakelaar heeft <b>4 klemmen</b>.','<b>L1</b>: fasedraad (bruin).','<b>1</b>: schakeldraad (zwart, +) naar de lamp.','<b>2</b>: schakeldraad (zwart, −) terug van de lamp.','<b>L2</b>: neuter (blauw).','Van voren zie je geen verschil met een enkelpolige schakelaar.']},
   {titel:'Het stroomkringschema',beeld:()=>imgB('dub_skk',380,'Stroomkringschema dubbelpolige schakeling uit de les'),tekst:['S1 staat twee keer in het schema: één contact in de fasedraad, één in de neuter.','Beide contacten heten S1. Ze bewegen samen.','S1 bedient de lampgroep E1, E2 en E3.']},
   {titel:'Probeer zelf',demo:'huis:dubbel',tekst:['Tik op S1. Kijk: beide contacten bewegen.']},
@@ -874,7 +875,7 @@ const MODS=[
  ]},
 {id:'wissel',hfst:'huis',titel:'Wisselschakeling',lpd:['LPD 4','LPD 14'],ico:'h_wissel',
  leren:[
-  {titel:'Wat is het?',tekst:['Twee schakelaars bedienen één lamp of lampgroep, vanaf <b>2 plaatsen</b>.','Bijvoorbeeld: een hal met 2 deuren, of onderaan en bovenaan de trap.','Niet gebruiken in vochtige ruimtes.']},
+  {titel:'Wat is het?',tekst:['Twee schakelaars bedienen één lamp of lampgroep, vanaf <b>2 plaatsen</b>.','Bijvoorbeeld: een hal met 2 deuren, of onderaan en bovenaan de trap.','Een gewone wisselschakelaar is niet spatwaterdicht. In een vochtige ruimte kies je een spatwaterdichte schakelaar (IP44).']},
   {titel:'De aansluitklemmen',tekst:['Een wisselschakelaar heeft <b>3 klemmen</b>: <b>L</b>, <b>1</b> en <b>1″</b>.','Op S1: klem L = de bruine fasedraad.','Klem 1 en 1″: de 2 schakeldraden naar S2.','Op S2: klem L = de schakeldraad naar de lamp.']},
   {titel:'Het stroomkringschema',beeld:()=>imgB('wis_skk',460,'Stroomkringschema wisselschakeling uit de les'),tekst:['S1 krijgt de fasedraad. Van S1 lopen 2 schakeldraden (1 en 1″) naar S2.','S2 geeft de stroom door naar de lamp E1.','Staan S1 en S2 op dezelfde draad? Dan brandt E1.']},
   {titel:'Probeer zelf',demo:'huis:wissel',tekst:['Tik op S1 en op S2.','Met elke schakelaar kan je E1 aan- en uitzetten.']},
@@ -898,7 +899,7 @@ const MODS=[
   {titel:'De aansluitklemmen',tekst:['Een kruisschakelaar heeft <b>4 klemmen</b>.','De 2 linkse klemmen: de schakeldraden van S1.','De 2 rechtse klemmen: de schakeldraden naar S3.']},
   {titel:'Het stroomkringschema',beeld:()=>imgB('kru_skk',300,'Stroomkringschema kruisschakeling uit de les'),tekst:['S1 krijgt de fasedraad.','S2 laat de 2 schakeldraden recht door, of kruist ze.','S3 geeft de stroom door naar de lamp E1.']},
   {titel:'Probeer zelf',demo:'huis:kruis',tekst:['Tik op S1, S2 en S3.','Elke schakelaar kan E1 aan- en uitzetten.']},
-  {titel:'Meer plaatsen?',tekst:['4 plaatsen: wissel – kruis – kruis – wissel.','Niet gebruiken in vochtige ruimtes.']},
+  {titel:'Meer plaatsen?',tekst:['4 plaatsen: wissel – kruis – kruis – wissel.','Een gewone kruisschakelaar is niet spatwaterdicht. In een vochtige ruimte kies je een spatwaterdichte schakelaar (IP44).']},
   {titel:'Het leidingschema',beeld:()=>imgB('kru_lei',540,'Leidingschema kruisschakeling uit de les'),tekst:['S1 en S3: wisselschakelaars. S2: de kruisschakelaar.','De cijfers tonen het aantal draden: 3 of 4.']},
   {titel:'Het bedradingschema',beeld:()=>imgB('kru_bed',480,'Bedradingschema kruisschakeling uit de les'),tekst:['Hier zie je welke draad op welke klem komt.']},
   {titel:'Eenlijnig symbool',beeld:()=>imgB('s_kruis',70,'Eenlijnig symbool'),tekst:['Zo teken je deze schakelaar op het leidingschema.']}
@@ -969,7 +970,7 @@ const MODS=[
 const WOORDEN=[
  ['aarding','De geel-groene draad. Letter A of PE. Beschermt jou als er iets misloopt.',()=>draad('geelgroen',84)],
  ['ampère (A)','De eenheid van stroom.',()=>wb('eA')],
- ['AREI','Het reglement voor elektrische installaties in België.',()=>wb('arei')],
+ ['AREI','Algemeen Reglement op de Elektrische Installaties: de regels voor elektriciteit in België.',()=>wb('arei')],
  ['automaat','Een zekering die je terug kan aanzetten.',()=>wb('automaat')],
  ['bedradingschema','Toont elke draad met zijn kleur en waar je hem aansluit.',()=>imgB('enk_bed',84,'Bedradingschema')],
  ['bron','Geeft energie. Bijvoorbeeld een batterij.',()=>sym('batterij',84)],
@@ -1052,6 +1053,7 @@ veilig:[
  {niv:3,type:'mc',vraag:'Wat is de juiste volgorde?',opties:['Uitzetten → beveiligen → testen','Testen → uitzetten → beveiligen','Beveiligen → testen → uitzetten'],juist:0,uitleg:'1. Spanning uitzetten. 2. Beveiligen. 3. Testen met een spanningstester.'},
  {niv:3,type:'mc',vraag:'Waarom test je met een spanningstester, ook al staat de automaat uit?',opties:['Misschien staat de verkeerde automaat uit. Je moet zeker zijn dat er geen spanning is.','Omdat je de spanning in volt moet opschrijven.','Om te zien of de lamp nog werkt.'],juist:0,uitleg:'Pas als je getest hebt, weet je zeker dat er geen spanning is.'},
  {niv:3,type:'mc',vraag:'Welke differentieelschakelaar is extra nodig voor de badkamer?',opties:['30 mA','300 mA'],juist:0,vast:true,uitleg:'Voor de badkamer: 30 mA. Die schakelt sneller uit.'},
+ {niv:3,type:'mc',vraag:'Een nieuwe woning (sinds juni 2023). Komen de stopcontacten in de slaapkamer achter een differentieel van 30 mA?',opties:['Ja, ook de stopcontacten en de verlichting.','Nee, alleen de badkamer.','Nee, er is geen differentieel nodig.'],juist:0,uitleg:'Sinds juni 2023 komen in nieuwe woningen ook de stopcontacten en de verlichting achter 30 mA.'},
  {niv:3,type:'mc',vraag:'Voor welke toestellen vraagt het AREI een extra differentieelschakelaar van 30 mA?',opties:['Wasmachine, droogkast en vaatwasser','Televisie en laptop','Verlichting in de slaapkamer'],juist:0,uitleg:'Toestellen die met water werken, krijgen extra bescherming: 30 mA.'}],
 geleiders:[
  {niv:1,type:'sort',vraag:'Geleider of isolator?',bakken:['Geleider','Isolator'],items:[['Koper',0,'Koper is een metaal. Metaal geleidt.'],['Kunststof (plastic)',1,'Kunststof laat geen stroom door.'],['Rubber',1,'Rubber laat geen stroom door.'],['Een ijzeren sleutel',0,'IJzer is een metaal. Metaal geleidt.']]},
@@ -1165,7 +1167,7 @@ kleuren:[
  {niv:2,type:'mc',vraag:'Welke draad gebruik je voor stopcontacten?',beeld:()=>doorsnedes(),opties:['2,5 mm²','1,5 mm²'],juist:0,vast:true,uitleg:'Stopcontacten: 2,5 mm² met een automaat van maximaal 20 A.'},
  {niv:2,type:'mc',vraag:'Welke draad gebruik je voor verlichting?',opties:['1,5 mm²','2,5 mm²','6 mm²'],juist:0,vast:true,uitleg:'Verlichting: 1,5 mm² met een automaat van maximaal 16 A.'},
  {niv:3,type:'mc',vraag:'Wat gebeurt er als een draad te dun is?',opties:['Hij wordt warm. Er kan brand ontstaan.','De lamp brandt feller.','Er gebeurt niets.'],juist:0,uitleg:'Een te dunne draad wordt warm. Daarom past de automaat bij de draad.'},
- {niv:3,type:'mc',vraag:'Hoeveel stopcontacten mag je maximaal op één kring zetten?',opties:['8','20','2'],juist:0,uitleg:'Het AREI zegt: maximaal 8 stopcontacten per kring.'},
+ {niv:3,type:'mc',vraag:'Hoeveel stopcontacten mag je maximaal op één kring zetten?',opties:['8','20','2'],juist:0,uitleg:'Het AREI zegt: maximaal 8 stopcontacten per kring. Een dubbel stopcontact telt als 1.'},
  {niv:3,type:'mc',vraag:'Welke automaat hoort bij een kring met stopcontacten in 2,5 mm²?',opties:['Maximaal 20 A','Maximaal 16 A','Maximaal 40 A'],juist:0,uitleg:'2,5 mm²: automaat van maximaal 20 A.'},
  {niv:3,type:'mc',vraag:'Wat is het verschil tussen VOB en XVB?',opties:['VOB is een losse draad in een buis. XVB is een kabel met een stevige mantel.','VOB is altijd dikker dan XVB.','Er is geen verschil.'],juist:0,uitleg:'VOB steek je in een buis. XVB is een kabel.'},
  {niv:3,type:'mc',vraag:'Je ziet een blauwe draad. Mag je die zonder testen aanraken?',opties:['Nee, test altijd eerst met een spanningstester.','Ja, blauw is altijd veilig.'],juist:0,vast:true,uitleg:'Ook een blauwe draad kan spanning hebben.'}],
@@ -1205,7 +1207,7 @@ dubbelpolig:[
  {niv:2,type:'mc',vraag:'Welk eenlijnig symbool is een dubbelpolige schakelaar?',opties:[{b:IMGQ('s_dubbel'),t:'A'},{b:IMGQ('s_enkel'),t:'B'},{b:IMGQ('s_serie'),t:'C'}],juist:0,uitleg:'Dit is het symbool van de dubbelpolige schakelaar.'},
  {niv:2,type:'mc',vraag:'Zie je van voren een verschil met een enkelpolige schakelaar?',opties:['Nee, je ziet geen verschil.','Ja, hij heeft twee knoppen.'],juist:0,vast:true,uitleg:'Het verschil zit binnenin: 4 klemmen.'},
  {niv:3,type:'mc',vraag:'Waarom is een dubbelpolige schakelaar veiliger?',opties:['Hij onderbreekt de fase én de nul. De lamp is helemaal spanningsvrij.','Hij is groter.','Hij heeft een lampje.'],juist:0,uitleg:'Fase en nul onderbroken = helemaal spanningsvrij.'},
- {niv:3,type:'mc',vraag:'Waar is een dubbelpolige schakelaar verplicht volgens het AREI?',opties:['In de badkamer','In de slaapkamer','In de gang'],juist:0,uitleg:'In de badkamer is dubbelpolig verplicht.'},
+ {niv:3,type:'mc',vraag:'Waar kies je best een dubbelpolige schakelaar?',opties:['In de badkamer','In de slaapkamer','In de gang'],juist:0,uitleg:'In de badkamer is dubbelpolig de veiligste keuze. Het AREI verplicht het niet meer, maar het is wel aangeraden.'},
  {niv:3,type:'mc',vraag:'Op welke klem komt de schakeldraad die terugkomt van de lamp?',opties:['2','1','L1'],juist:0,uitleg:'Klem 1: schakeldraad naar de lamp. Klem 2: schakeldraad terug van de lamp.'},
  {niv:3,type:'mc',vraag:'Hoeveel lampen bedient S1 in het schema uit de les?',beeld:()=>imgB('dub_skk',260,'Stroomkringschema dubbelpolig'),opties:['3: E1, E2 en E3','1','2'],juist:0,uitleg:'S1 bedient de lampgroep E1, E2 en E3.'}],
 dubbele:[
@@ -1231,7 +1233,7 @@ wissel:[
  {niv:2,type:'mc',vraag:'Hoeveel klemmen heeft een wisselschakelaar?',opties:['3','2','4'],juist:0,uitleg:'L, 1 en 1″.'},
  {niv:2,type:'mc',vraag:'Op welke klem van S1 komt de bruine fasedraad?',opties:['L','1','1″'],juist:0,vast:true,uitleg:'De fasedraad komt op klem L van S1.'},
  {niv:3,type:'mc',vraag:'Je wisselt draad 1 en 1″ om. Wat gebeurt er?',opties:['Alleen de stand van de knoppen verandert. De schakeling werkt nog.','De lamp brandt nooit meer.','Er ontstaat kortsluiting.'],juist:0,uitleg:'De schakeling werkt nog. Alleen de stand van de knoppen is anders.'},
- {niv:3,type:'mc',vraag:'Mag je een wisselschakeling in een badkamer gebruiken?',opties:['Nee, niet in vochtige ruimtes.','Ja, overal.'],juist:0,vast:true,uitleg:'Niet in vochtige ruimtes.'},
+ {niv:3,type:'mc',vraag:'Je wil een wisselschakelaar in een vochtige ruimte. Waar let je op?',opties:['Hij moet spatwaterdicht zijn (IP44).','Hij moet groter zijn.','Daar let je niet op.'],juist:0,uitleg:'In een vochtige ruimte kies je een spatwaterdichte schakelaar. Een gewone schakelaar is niet geschikt.'},
  {niv:3,type:'mc',vraag:'Op welke klem van S2 komt de schakeldraad naar de lamp?',opties:['L','1','1″'],juist:0,vast:true,uitleg:'Op S2 is klem L de schakeldraad naar de lamp.'},
  {niv:3,type:'mc',vraag:'Wanneer brandt E1 in een wisselschakeling?',opties:['Als S1 en S2 op dezelfde schakeldraad staan.','Alleen als S1 aan staat.','Als S1 en S2 allebei uit staan.'],juist:0,uitleg:'De stroom moet een weg vinden van S1 naar S2.'}],
 kruis:[
