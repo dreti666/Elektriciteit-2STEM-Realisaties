@@ -229,6 +229,12 @@ input[type=text]{background:#0E1430;color:var(--ink);border-color:var(--line)}
 :focus-visible{outline-color:var(--geel)}
 
 @media (min-width:900px){.nav{left:50%;right:auto;width:860px;transform:translateX(-50%);border:3px solid var(--accent);border-bottom:0;border-radius:18px 18px 0 0}}
+
+.lijst-woord .pic{border:0;cursor:zoom-in}
+.lijst-woord .pic img{width:84px;height:auto}
+.lijst-woord{flex-wrap:wrap}
+.lijst-woord.groot .pic{order:3;width:100%;cursor:zoom-out;padding:12px}
+.lijst-woord.groot .pic svg,.lijst-woord.groot .pic img{width:100% !important;max-width:520px;max-height:420px;object-fit:contain}
 </style>
 </head>
 <body>
@@ -962,53 +968,53 @@ const MODS=[
 ];
 const WOORDEN=[
  ['aarding','De geel-groene draad. Letter A of PE. Beschermt jou als er iets misloopt.',()=>draad('geelgroen',84)],
- ['ampère (A)','De eenheid van stroom.'],
- ['AREI','Het reglement voor elektrische installaties in België.'],
- ['automaat','Een zekering die je terug kan aanzetten.'],
- ['bedradingschema','Toont elke draad met zijn kleur en waar je hem aansluit.'],
+ ['ampère (A)','De eenheid van stroom.',()=>wb('eA')],
+ ['AREI','Het reglement voor elektrische installaties in België.',()=>wb('arei')],
+ ['automaat','Een zekering die je terug kan aanzetten.',()=>wb('automaat')],
+ ['bedradingschema','Toont elke draad met zijn kleur en waar je hem aansluit.',()=>imgB('enk_bed',84,'Bedradingschema')],
  ['bron','Geeft energie. Bijvoorbeeld een batterij.',()=>sym('batterij',84)],
- ['differentieelschakelaar','Schakelt uit als er stroom weglekt. Beschermt jou.'],
- ['doorsnede','De dikte van een draad, in mm².'],
+ ['differentieelschakelaar','Schakelt uit als er stroom weglekt. Beschermt jou.',()=>wb('diff')],
+ ['doorsnede','De dikte van een draad, in mm².',()=>wb('doorsnede')],
  ['dubbelpolige schakelaar','Onderbreekt de fase én de nul.',()=>imgB('s_dubbel',34)],
- ['eenlijnig','Alle draden samen als één lijn getekend.'],
+ ['eenlijnig','Alle draden samen als één lijn getekend.',()=>wb('eenlijnig')],
  ['elektrische schok','Stroom gaat door je lichaam. Dat is gevaarlijk.',()=>picto(60)],
  ['enkelpolige schakelaar','Onderbreekt de fase. Eén lamp, één plaats.',()=>imgB('s_enkel',44)],
  ['fasedraad','Bruine (of rode) draad. Ook: lijndraad. Letter L, +. Hier staat spanning op.',()=>draad('bruin',84)],
- ['groepenkast','De kast met de automaten en de differentieelschakelaars.'],
- ['ampèremeter','Meet de stroom. Staat in de draad (in serie).'],
- ['voltmeter','Meet de spanning. Staat naast de verbruiker (parallel).'],
- ['generator','Maakt elektriciteit als hij draait.'],
- ['geleider','Stroom gaat er goed door. Bijvoorbeeld koper.'],
+ ['groepenkast','De kast met de automaten en de differentieelschakelaars.',()=>wb('groepenkast')],
+ ['ampèremeter','Meet de stroom. Staat in de draad (in serie).',()=>wb('ampere')],
+ ['voltmeter','Meet de spanning. Staat naast de verbruiker (parallel).',()=>wb('volt')],
+ ['generator','Maakt elektriciteit als hij draait.',()=>wb('generator')],
+ ['geleider','Stroom gaat er goed door. Bijvoorbeeld koper.',()=>wb('geleider')],
  ['gesloten kring','De stroom kan helemaal rond. De lamp brandt.',()=>kEnkel({sw:true})],
- ['isolator','Stroom gaat er niet door. Bijvoorbeeld kunststof.'],
+ ['isolator','Stroom gaat er niet door. Bijvoorbeeld kunststof.',()=>wb('isolator')],
  ['kruisschakelaar','Staat tussen twee wisselschakelaars. Voor 3 of meer plaatsen.',()=>imgB('s_kruis',50)],
  ['led','Een lampje dat zuinig is. Stroom gaat er maar in één richting door.',()=>ledSym(84)],
- ['leidingschema','Toont waar alles zit in het gebouw. Eenlijnig getekend.'],
- ['meerlijnig','Elke draad apart getekend.'],
+ ['leidingschema','Toont waar alles zit in het gebouw. Eenlijnig getekend.',()=>imgB('enk_lei',84,'Leidingschema')],
+ ['meerlijnig','Elke draad apart getekend.',()=>wb('meerlijnig')],
  ['multimeter','Toestel om spanning, stroom en weerstand te meten.',()=>mm('OFF','',60)],
  ['nuldraad','De blauwe draad. Ook: neuter. Letter N, −.',()=>draad('blauw',84)],
- ['ohm (Ω)','De eenheid van weerstand.'],
- ['omvormer','Maakt van gelijkspanning wisselspanning.'],
+ ['ohm (Ω)','De eenheid van weerstand.',()=>wb('ohm')],
+ ['omvormer','Maakt van gelijkspanning wisselspanning.',()=>wb('omvormer')],
  ['open kring','De stroom kan niet rond. De lamp brandt niet.',()=>kEnkel({sw:false})],
- ['parallel','Elke verbruiker heeft een eigen weg.'],
+ ['parallel','Elke verbruiker heeft een eigen weg.',()=>kPar({s1:true,s2:true})],
  ['schakeldraad','Zwarte draad van de schakelaar naar de lamp. Nooit bruin/rood, blauw of geel-groen.',()=>draad('zwart',84)],
  ['schakelaar','Zet de stroom aan en uit.',()=>imgB('m_schakelaar',84)],
- ['serie','Verbruikers na elkaar. Er is maar één weg.'],
+ ['serie','Verbruikers na elkaar. Er is maar één weg.',()=>kSerie({sw:true,l1:true})],
  ['serieschakelaar','Eén schakelaar met twee knoppen voor twee lampen.',()=>imgB('s_serie',50)],
- ['spanning','De duw die de stroom laat bewegen. Eenheid: volt (V).'],
- ['spanningstester','Toestel om te testen of er spanning is.'],
- ['stroom','Hoeveel elektriciteit door de draad gaat. Eenheid: ampère (A).'],
- ['stroomkringschema','Toont hoe een schakeling werkt, van fase naar nul.'],
+ ['spanning','De duw die de stroom laat bewegen. Eenheid: volt (V).',()=>wb('spanning')],
+ ['spanningstester','Toestel om te testen of er spanning is.',()=>wb('tester')],
+ ['stroom','Hoeveel elektriciteit door de draad gaat. Eenheid: ampère (A).',()=>wb('stroom')],
+ ['stroomkringschema','Toont hoe een schakeling werkt, van fase naar nul.',()=>imgB('enk_skk',84,'Stroomkringschema')],
  ['verbruiker','Gebruikt energie. Bijvoorbeeld een lamp of een motor.',()=>imgB('m_lamp',60)],
- ['vermogen','Hoeveel energie een toestel gebruikt. Eenheid: watt (W).'],
- ['volt (V)','De eenheid van spanning.'],
- ['voorschakelweerstand','De weerstand die een led beschermt.'],
- ['watt (W)','De eenheid van vermogen.'],
+ ['vermogen','Hoeveel energie een toestel gebruikt. Eenheid: watt (W).',()=>wb('vermogen')],
+ ['volt (V)','De eenheid van spanning.',()=>wb('eV')],
+ ['voorschakelweerstand','De weerstand die een led beschermt.',()=>kLed({om:false,weg:false})],
+ ['watt (W)','De eenheid van vermogen.',()=>wb('watt')],
  ['weerstand','Hoe moeilijk de stroom erdoor kan. Eenheid: ohm (Ω).',()=>sym('weerstand',84)],
- ['wet van Ohm','U = R × I.'],
+ ['wet van Ohm','U = R × I.',()=>ohmDriehoek(84)],
  ['wisselschakelaar','Voor één lamp vanaf twee plaatsen. Heeft 3 klemmen.',()=>imgB('s_wissel',44)],
  ['zekering','Beveiliging. Schakelt de stroom uit als er te veel stroom is.',()=>sym('zekering',84)],
- ['zonnepaneel','Maakt elektriciteit uit licht.']
+ ['zonnepaneel','Maakt elektriciteit uit licht.',()=>wb('zonnepaneel')]
 ];
 
 const MMUITLEG={OFF:'Uit. Zet de multimeter altijd uit als je klaar bent.','V⎓':'Gelijkspanning. Bijvoorbeeld een batterij.','V~':'Wisselspanning. Bijvoorbeeld een stopcontact. Alleen met de leraar!',A:'Stroom in ampère. De multimeter komt ín de kring.','Ω':'Weerstand in ohm. Alleen zonder spanning!'};
@@ -1307,6 +1313,38 @@ function nivKeuze(m){
 }
 function nivBolletjes(m){return `<span class="nivbol">${NIVEAUS.map(([n,naam])=>{const r=nivRes(m,n);return `<i class="${r&&r.best>=.7?'vol':r?'half':''}" title="${naam}">${naam[0]}</i>`;}).join('')}</span>`;}
 
+/* ---------- beelden voor de woordenlijst ---------- */
+function wb(k,w=84){
+  const Z='#2B2B2B',sv=(vb,inh,al)=>`<svg width="${w}" viewBox="${vb}" role="img" aria-label="${al}">${inh}</svg>`;
+  const tegel=(t,kl,sub)=>sv('0 0 100 100',`<rect x="8" y="8" width="84" height="84" rx="18" fill="${kl}"/><text x="50" y="${sub?60:68}" text-anchor="middle" font-size="${t.length>1?40:54}" font-weight="700" fill="#fff" font-family="Arial">${t}</text>${sub?`<text x="50" y="82" text-anchor="middle" font-size="14" fill="#fff" font-family="Arial">${sub}</text>`:''}`,'Eenheid '+t);
+  const meter=(l,al)=>sv('0 0 120 70',`<line x1="4" y1="35" x2="36" y2="35" stroke="${Z}" stroke-width="4"/><line x1="84" y1="35" x2="116" y2="35" stroke="${Z}" stroke-width="4"/><circle cx="60" cy="35" r="24" fill="#fff" stroke="${Z}" stroke-width="4"/><text x="60" y="47" text-anchor="middle" font-size="32" font-weight="700" fill="${Z}" font-family="Arial">${l}</text>`,al);
+  switch(k){
+  case 'ampere':return meter('A','Symbool ampèremeter');
+  case 'volt':return meter('V','Symbool voltmeter');
+  case 'eA':return tegel('A','#D62828','ampère');
+  case 'eV':return tegel('V','#2E7D4F','volt');
+  case 'ohm':return tegel('Ω','#2C6FD1','ohm');
+  case 'watt':return tegel('W','#C98A00','watt');
+  case 'arei':return sv('0 0 100 100',`<path d="M14 18 Q50 8 50 22 Q50 8 86 18 V84 Q50 74 50 88 Q50 74 14 84 Z" fill="#F3F6FB" stroke="${Z}" stroke-width="4" stroke-linejoin="round"/><line x1="50" y1="22" x2="50" y2="88" stroke="${Z}" stroke-width="3"/><text x="32" y="56" text-anchor="middle" font-size="13" font-weight="700" fill="#A35A00" font-family="Arial">AREI</text><path d="M22 66h20M22 72h18M58 40h20M58 48h20M58 56h16M58 66h20M58 72h14" stroke="#8A97A8" stroke-width="3"/>`,'Boek met het AREI');
+  case 'automaat':return sv('0 0 100 100',`<rect x="28" y="8" width="44" height="84" rx="6" fill="#F4F4F4" stroke="${Z}" stroke-width="4"/><rect x="40" y="26" width="20" height="30" rx="4" fill="#444"/><rect x="42" y="28" width="16" height="12" rx="2" fill="#2E9B3A"/><text x="50" y="76" text-anchor="middle" font-size="15" font-weight="700" fill="${Z}" font-family="Arial">C16</text><circle cx="50" cy="15" r="3" fill="${Z}"/><circle cx="50" cy="86" r="3" fill="${Z}"/>`,'Automaat');
+  case 'diff':return sv('0 0 100 100',`<rect x="14" y="8" width="72" height="84" rx="6" fill="#F4F4F4" stroke="${Z}" stroke-width="4"/><rect x="24" y="24" width="20" height="30" rx="4" fill="#444"/><rect x="26" y="26" width="16" height="12" rx="2" fill="#2E9B3A"/><circle cx="66" cy="34" r="10" fill="#FFD43B" stroke="${Z}" stroke-width="3"/><text x="66" y="40" text-anchor="middle" font-size="14" font-weight="700" fill="${Z}" font-family="Arial">T</text><text x="50" y="78" text-anchor="middle" font-size="15" font-weight="700" fill="${Z}" font-family="Arial">30 mA</text>`,'Differentieelschakelaar met testknop');
+  case 'doorsnede':return sv('0 0 100 100',`<circle cx="50" cy="50" r="38" fill="#D7D7D7" stroke="#555" stroke-width="3"/><circle cx="50" cy="50" r="22" fill="#C87533" stroke="#8A4A1A" stroke-width="3"/><line x1="28" y1="50" x2="72" y2="50" stroke="#fff" stroke-width="3"/><path d="M28 50l7-5v10zM72 50l-7-5v10z" fill="#fff"/><text x="50" y="96" text-anchor="middle" font-size="13" font-weight="700" fill="${Z}" font-family="Arial">mm²</text>`,'Doorsnede van een draad');
+  case 'eenlijnig':return sv('0 0 120 70',`<line x1="6" y1="35" x2="114" y2="35" stroke="${Z}" stroke-width="4"/><path d="M48 50l12-30M60 50l12-30M72 50l12-30" stroke="${Z}" stroke-width="4"/><text x="18" y="24" font-size="16" font-weight="700" fill="${Z}" font-family="Arial">3</text>`,'Eén lijn met drie streepjes: drie draden');
+  case 'meerlijnig':return sv('0 0 120 70',`<line x1="6" y1="18" x2="114" y2="18" stroke="#8B4513" stroke-width="6"/><line x1="6" y1="35" x2="114" y2="35" stroke="#2C6FD1" stroke-width="6"/><line x1="6" y1="52" x2="114" y2="52" stroke="#2E9B3A" stroke-width="6"/><line x1="6" y1="52" x2="114" y2="52" stroke="#FFD43B" stroke-width="6" stroke-dasharray="8 8"/>`,'Drie aparte draden');
+  case 'groepenkast':return sv('0 0 100 100',`<rect x="8" y="10" width="84" height="80" rx="6" fill="#EDEDED" stroke="${Z}" stroke-width="4"/><rect x="14" y="36" width="72" height="28" fill="#BDBDBD"/>${[0,1,2,3,4].map(i=>`<rect x="${17+i*14}" y="38" width="11" height="24" rx="2" fill="#fff" stroke="${Z}" stroke-width="1.5"/><rect x="${19.5+i*14}" y="44" width="6" height="7" fill="${i?'#444':'#FFD43B'}"/>`).join('')}`,'Groepenkast met automaten');
+  case 'generator':return sv('0 0 120 70',`<line x1="4" y1="35" x2="36" y2="35" stroke="${Z}" stroke-width="4"/><line x1="84" y1="35" x2="116" y2="35" stroke="${Z}" stroke-width="4"/><circle cx="60" cy="35" r="24" fill="#fff" stroke="${Z}" stroke-width="4"/><text x="60" y="44" text-anchor="middle" font-size="26" font-weight="700" fill="${Z}" font-family="Arial">G</text><path d="M50 56q5-6 10 0t10 0" fill="none" stroke="${Z}" stroke-width="2.5"/>`,'Symbool generator');
+  case 'geleider':return sv('0 0 120 70',`<path d="M8 40 Q30 20 52 40 T96 40" fill="none" stroke="#C87533" stroke-width="10" stroke-linecap="round"/><path d="M8 40 Q30 20 52 40 T96 40" fill="none" stroke="#F0B27A" stroke-width="3" stroke-linecap="round"/><text x="104" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#2E9B3A" font-family="Arial">✓</text>`,'Koperdraad: een geleider');
+  case 'isolator':return sv('0 0 120 70',`<rect x="6" y="30" width="56" height="12" rx="3" fill="#B0B0B0" stroke="${Z}" stroke-width="2"/><path d="M60 22h44a10 10 0 0 1 10 10v8a10 10 0 0 1-10 10H60z" fill="#E8B100" stroke="${Z}" stroke-width="3"/><path d="M60 22h12v28H60z" fill="#D62828" stroke="${Z}" stroke-width="2"/>`,'Schroevendraaier met kunststof handvat');
+  case 'omvormer':return sv('0 0 100 100',`<rect x="14" y="14" width="72" height="72" fill="#fff" stroke="${Z}" stroke-width="4"/><line x1="14" y1="86" x2="86" y2="14" stroke="${Z}" stroke-width="3"/><path d="M24 34h24" stroke="${Z}" stroke-width="3.5"/><path d="M24 43h24" stroke="${Z}" stroke-width="3.5" stroke-dasharray="6 3"/><path d="M54 70q5-10 10 0t10 0" fill="none" stroke="${Z}" stroke-width="3.5"/>`,'Symbool omvormer: gelijkspanning naar wisselspanning');
+  case 'spanning':return sv('0 0 100 100',`<rect x="12" y="12" width="76" height="76" rx="16" fill="#F4F4F4" stroke="${Z}" stroke-width="4"/><circle cx="50" cy="50" r="28" fill="#fff" stroke="${Z}" stroke-width="3"/><circle cx="38" cy="50" r="5" fill="${Z}"/><circle cx="62" cy="50" r="5" fill="${Z}"/><rect x="47" y="24" width="6" height="9" rx="2" fill="#9AA0A6" stroke="${Z}" stroke-width="1.5"/><text x="50" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#D62828" font-family="Arial">230 V</text>`,'Stopcontact met 230 volt');
+  case 'tester':return sv('0 0 120 70',`<path d="M4 35l26-4v8z" fill="#9AA0A6" stroke="${Z}" stroke-width="2"/><rect x="28" y="26" width="84" height="18" rx="9" fill="#2C6FD1" stroke="${Z}" stroke-width="3"/><rect x="48" y="29" width="22" height="12" rx="5" fill="#FFB347" stroke="${Z}" stroke-width="1.5"/><circle cx="59" cy="35" r="3" fill="#D62828"/>`,'Spanningstester');
+  case 'stroom':return sv('0 0 120 70',`<line x1="6" y1="35" x2="114" y2="35" stroke="#8B4513" stroke-width="5"/>${[24,60,96].map(x=>`<path d="M${x-8} 25l12 10-12 10" fill="none" stroke="#D62828" stroke-width="4" stroke-linejoin="round"/>`).join('')}<text x="60" y="62" text-anchor="middle" font-size="16" font-weight="700" fill="#D62828" font-family="Arial">I</text>`,'Stroom loopt door de draad');
+  case 'vermogen':return sv('0 0 100 100',`<path d="M50 10a26 26 0 0 0-15 47c4 3 5 7 5 11h20c0-4 1-8 5-11a26 26 0 0 0-15-47z" fill="#FFE066" stroke="${Z}" stroke-width="3.5"/><rect x="40" y="70" width="20" height="14" rx="3" fill="#B0B0B0" stroke="${Z}" stroke-width="3"/><text x="50" y="44" text-anchor="middle" font-size="18" font-weight="700" fill="${Z}" font-family="Arial">5 W</text>`,'Lamp van 5 watt');
+  case 'zonnepaneel':return sv('0 0 100 100',`<circle cx="80" cy="18" r="10" fill="#FFD43B"/><path d="M12 76l14-46h62l-14 46z" fill="#1F3D7A" stroke="${Z}" stroke-width="3" stroke-linejoin="round"/><path d="M33 30l-14 46M54 30l-14 46M74 30l-14 46M19 46h65M15 61h65" stroke="#8EB0FF" stroke-width="2"/><line x1="50" y1="76" x2="50" y2="92" stroke="${Z}" stroke-width="4"/>`,'Zonnepaneel');
+  }
+  return '';
+}
+
 /* ---------- schermen ---------- */
 function render(){
   const a=document.getElementById('app');
@@ -1428,7 +1466,7 @@ function eindView(m){
 }
 
 function woorden(){
-  return `<h1>Woordenlijst</h1><div class="kaart">`+WOORDEN.slice().sort((x,y)=>x[0].localeCompare(y[0],'nl')).map(([w,u,b])=>`<div class="lijst-woord"><div class="pic">${b?b():''}</div><div style="flex:1"><b>${w}</b><br>${u}</div>${spreekKnop(w.replace(/\(.*\)/,'')+'. '+u)}</div>`).join('')+`</div>`;
+  return `<h1>Woordenlijst</h1><p class="klein">Tik op een tekening om ze groter te zien.</p><div class="kaart">`+WOORDEN.slice().sort((x,y)=>x[0].localeCompare(y[0],'nl')).map(([w,u,b])=>`<div class="lijst-woord"><button class="pic" data-act="zoom" aria-label="Toon de tekening van ${w} groter">${b?b():''}</button><div style="flex:1"><b>${w}</b><br>${u}</div>${spreekKnop(w.replace(/\(.*\)/,'')+'. '+u)}</div>`).join('')+`</div>`;
 }
 function stemKaart(){
   let h=`<div class="kaart"><h2>Stem voor het voorlezen</h2>`;
@@ -1482,6 +1520,7 @@ document.addEventListener('click',e=>{
   const el=e.target.closest('[data-act]');if(!el||el.disabled)return;
   const a=el.dataset.act,k=el.dataset.k;
   if(a==='spreek'){spreek(el.dataset.t);return;}
+  if(a==='zoom'){el.closest('.lijst-woord').classList.toggle('groot');return;}
   if(a==='stem'){S.stem=el.dataset.n;bewaar();rerender();spreek('Hallo! Zo klink ik.');return;}
   if(a==='teststem'){spreek('Hallo! Ik lees de tekst voor. Welkom bij elektriciteit stap voor stap.');return;}
   if(a==='go'){if(V.view==='instellingen'){const n=document.getElementById('naam');if(n){S.naam=n.value.trim().slice(0,30);bewaar();}}V={view:el.dataset.v};render();return;}
