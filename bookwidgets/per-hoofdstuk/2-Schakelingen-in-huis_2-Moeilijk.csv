@@ -1,0 +1,21 @@
+Question,A,B,C,D,E,F,Answer,Rationale,RandomOrder,MultiColumn
+[Kleuren en kabeldiktes] Welke kleur mag een schakeldraad nooit hebben?,Blauw,Zwart,Grijs,,,,A,"Nooit bruin/rood, blauw of geel-groen.",yes,no
+[Kleuren en kabeldiktes] Welke draad gebruik je voor verlichting?,"1,5 mm²","2,5 mm²",6 mm²,,,,A,"Verlichting: 1,5 mm² met een automaat van maximaal 16 A.",no,no
+"[Volt, ampère, ohm en watt in het schema] Hoe sluit je een voltmeter aan?","Naast de verbruiker, over de twee draden (parallel)","In de draad, zodat de stroom erdoor moet (in serie)",,,,,A,Een voltmeter staat parallel over de verbruiker.,no,no
+"[Volt, ampère, ohm en watt in het schema] Waar staat een ampèremeter?",In de draad (in serie),Naast de verbruiker (parallel),,,,,A,De stroom moet door de ampèremeter.,no,no
+"[Volt, ampère, ohm en watt in het schema] Welk toestel trekt de meeste stroom?",Waterkoker 2300 W,Lamp 23 W,Strijkijzer 1150 W,,,,A,Meer watt = meer stroom.,yes,no
+[Enkelpolige schakeling] Op welke klem sluit je de bruine fasedraad aan?,L1,1,,,,,A,"Bruin op L1, zwart op klem 1.",no,no
+[Enkelpolige schakeling] Hoeveel klemmen heeft een enkelpolige schakelaar?,2,3,4,,,,A,L1 en 1.,yes,no
+[Enkelpolige schakeling] Waar gebruik je een enkelpolige schakeling?,In een slaapkamer met één deur,Op een trap met twee schakelaars,In een lange gang met drie deuren,,,,A,"Eén lamp, vanaf één plaats, in een droge ruimte.",yes,no
+[Dubbelpolige schakeling] Hoeveel klemmen heeft een dubbelpolige schakelaar?,4,2,3,,,,A,"L1, 1, 2 en L2.",yes,no
+[Dubbelpolige schakeling] Op welke klem komt de blauwe neuter?,L2,L1,1,,,,A,De neuter (blauw) komt op L2.,yes,no
+[Dubbelpolige schakeling] Zie je van voren een verschil met een enkelpolige schakelaar?,"Nee, je ziet geen verschil.","Ja, hij heeft twee knoppen.",,,,,A,Het verschil zit binnenin: 4 klemmen.,no,no
+[Serieschakelaar (dubbele aansteking)] Hoeveel klemmen heeft een serieschakelaar?,3,2,4,,,,A,"L1, 1 en 2.",yes,no
+[Serieschakelaar (dubbele aansteking)] Waar sluit je de bruine fasedraad aan?,L1,1,2,,,,A,De fasedraad komt op L1.,yes,no
+[Serieschakelaar (dubbele aansteking)] Op welke klem sluit je de schakeldraad van lampgroep 2 aan?,2,1,L1,,,,A,Klem 2 gaat naar lampgroep 2.,yes,no
+[Wisselschakeling] Hoeveel klemmen heeft een wisselschakelaar?,3,2,4,,,,A,"L, 1 en 1″.",yes,no
+[Wisselschakeling] Op welke klem van S1 komt de bruine fasedraad?,L,1,1″,,,,A,De fasedraad komt op klem L van S1.,no,no
+[Kruisschakeling] Hoeveel klemmen heeft een kruisschakelaar?,4,3,2,,,,A,Een kruisschakelaar heeft 4 klemmen.,yes,no
+[Kruisschakeling] Je wil één lamp bedienen vanaf 3 plaatsen. Wat heb je nodig?,2 wisselschakelaars en 1 kruisschakelaar,3 enkelpolige schakelaars,1 serieschakelaar,,,,A,Wissel – kruis – wissel.,yes,no
+[Kruisschakeling] Welke schakelaars staan aan de twee uiteinden?,Wisselschakelaars,Kruisschakelaars,Enkelpolige schakelaars,,,,A,Begin en einde: een wisselschakelaar.,yes,no
+[Kruisschakeling] Hoeveel wisselschakelaars zitten er altijd in een kruisschakeling?,2,1,3,,,,A,Altijd 2: één aan elk uiteinde.,yes,no

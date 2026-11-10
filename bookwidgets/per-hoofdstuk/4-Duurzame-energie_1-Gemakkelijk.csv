@@ -1,0 +1,20 @@
+Question,A,B,C,D,E,F,Answer,Rationale,RandomOrder,MultiColumn
+[Zonne-energie] Wat zet een zonnepaneel om in elektriciteit?,Licht,Wind,Water,,,,A,Een zonnepaneel gebruikt licht.,yes,no
+[Zonne-energie] Raakt zonne-energie op?,"Nee, de zon raakt niet op.","Ja, na een paar jaar.",,,,,A,Zonne-energie is duurzaam.,no,no
+[Zonne-energie] Wat geeft een zonnepaneel?,Gelijkspanning (DC),Wisselspanning (AC),,,,,A,Een zonnepaneel geeft gelijkspanning.,no,no
+[Windenergie] Welk deel van een windturbine maakt de elektriciteit?,De generator,De mast,De wieken,,,,A,De wieken draaien de generator. De generator maakt de stroom.,yes,no
+[Windenergie] Het stormt. Wat doet de windturbine?,Ze zet zich stil.,Ze draait zo snel mogelijk.,,,,,A,Bij storm stopt de turbine voor de veiligheid.,no,no
+[Windenergie] Is windenergie duurzaam?,"Ja, wind raakt niet op.","Nee, wind raakt op.",,,,,A,Wind raakt niet op.,no,no
+[Energiewoning: Zonnepanelen] Wanneer leveren de zonnepanelen het meeste vermogen?,"Rond de middag, als de zon het hoogst staat.",'s Ochtends vroeg.,'s Avonds laat.,,,,A,Rond 13 u staat de zon het hoogst.,yes,no
+[Energiewoning: Zonnepanelen] Wat zet een zonnepaneel om in elektriciteit?,Licht,Wind,Warmte van de grond,,,,A,Een zonnepaneel gebruikt licht.,yes,no
+[Energiewoning: Windenergie] Vanaf welke windsnelheid maakt deze windturbine stroom?,0 m/s,20 m/s,3 m/s,,,,C,Onder 3 m/s draait ze te traag.,yes,no
+[Energiewoning: Windenergie] Welk deel van de windturbine maakt de elektriciteit?,De mast,De generator,De wieken,,,,B,De wieken draaien de generator. De generator maakt de stroom.,yes,no
+[Energiewoning: Windenergie] Waarom stopt de turbine bij storm (vanaf 20 m/s)?,Omdat er dan geen zon is.,Omdat het net vol is.,Zodat ze niet kapotgaat.,,,,C,Te hard draaien kan de turbine beschadigen.,yes,no
+[Energiewoning: Windenergie] Waaraan zie je dat het hard waait?,De wieken van de turbine draaien snel.,De batterij is vol.,De zonnepanelen worden warm.,,,,A,Meer wind: de wieken draaien sneller.,yes,no
+[Energiewoning: Verbruik en het net] Wat betekent injectie?,De woning neemt stroom van het net.,De woning geeft stroom aan het net.,Er gaat stroom in de batterij.,,,,B,Injectie: het overschot gaat naar het net.,yes,no
+[Energiewoning: Verbruik en het net] Wanneer neemt de woning stroom van het net?,Als het verbruik groter is dan wat er opgewekt wordt.,Als de zon fel schijnt.,Als alle toestellen uit staan.,,,,A,Tekort = afname van het net.,yes,no
+[Energiewoning: Verbruik en het net] Welk toestel verbruikt het minst?,Elektrische step laden,PlayStation met tv,Gaming-pc,,,,A,"Elektrische step laden: 100 W, Gaming-pc: 400 W, PlayStation met tv: 300 W.",yes,no
+[Energiewoning: Batterij] Er wordt meer opgewekt dan verbruikt. Wat doet de batterij?,Ze laadt op.,Ze geeft stroom af.,Niets.,,,,A,Het overschot gaat eerst in de batterij.,yes,no
+[Energiewoning: Batterij] Wanneer geeft de batterij stroom af?,Als de zon fel schijnt.,Als de batterij leeg is.,"Als het verbruik groter is dan de opwek, bijvoorbeeld 's avonds.",,,,C,Bij een tekort komt de stroom eerst uit de batterij.,yes,no
+[Energiewoning: Batterij] Waarom is een thuisbatterij handig?,Ze maakt de wind sterker.,"Ze bewaart het overschot voor later, bijvoorbeeld 's avonds.",Ze maakt zelf stroom.,,,,B,Zo gebruik je meer van je eigen stroom.,yes,no
+[Energiewoning: Batterij] Op welk uur leveren de zonnepanelen het meeste? (Kijk bij Dagverloop naar de gele staven.),20 u,13 u,8 u,,,,B,Rond 13 u staat de zon het hoogst.,yes,no

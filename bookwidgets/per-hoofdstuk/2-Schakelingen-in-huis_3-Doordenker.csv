@@ -1,0 +1,27 @@
+Question,A,B,C,D,E,F,Answer,Rationale,RandomOrder,MultiColumn
+[Kleuren en kabeldiktes] Wat gebeurt er als een draad te dun is?,Hij wordt warm. Er kan brand ontstaan.,De lamp brandt feller.,Er gebeurt niets.,,,,A,Een te dunne draad wordt warm. Daarom past de automaat bij de draad.,yes,no
+[Kleuren en kabeldiktes] Hoeveel stopcontacten mag je maximaal op één kring zetten?,8,20,2,,,,A,Het AREI zegt: maximaal 8 stopcontacten per kring.,yes,no
+"[Kleuren en kabeldiktes] Welke automaat hoort bij een kring met stopcontacten in 2,5 mm²?",Maximaal 20 A,Maximaal 16 A,Maximaal 40 A,,,,A,"2,5 mm²: automaat van maximaal 20 A.",yes,no
+[Kleuren en kabeldiktes] Wat is het verschil tussen VOB en XVB?,VOB is een losse draad in een buis. XVB is een kabel met een stevige mantel.,VOB is altijd dikker dan XVB.,Er is geen verschil.,,,,A,VOB steek je in een buis. XVB is een kabel.,yes,no
+[Kleuren en kabeldiktes] Je ziet een blauwe draad. Mag je die zonder testen aanraken?,"Nee, test altijd eerst met een spanningstester.","Ja, blauw is altijd veilig.",,,,,A,Ook een blauwe draad kan spanning hebben.,no,no
+"[Volt, ampère, ohm en watt in het schema] Een waterkoker van 2300 W op 230 V. Hoeveel stroom?",10 A,2530 A,23 A,,,,A,I = P : U = 2300 : 230 = 10 A.,yes,no
+"[Volt, ampère, ohm en watt in het schema] Een strijkijzer van 1150 W op 230 V. Hoeveel stroom?",5 A,50 A,"0,2 A",,,,A,I = P : U = 1150 : 230 = 5 A.,yes,no
+[Enkelpolige schakeling] Waarom onderbreek je de fasedraad en niet de nuldraad?,Zo staat er geen spanning op de lamp als hij uit is.,Omdat de nuldraad blauw is.,Dat maakt niet uit.,,,,A,Sleutelprincipe: alleen de fasedraad onderbreken.,yes,no
+[Enkelpolige schakeling] Waar sluit je de nuldraad aan?,Rechtstreeks op de lamp,Op klem L1 van de schakelaar,Op klem 1 van de schakelaar,,,,A,De nuldraad gaat niet naar de schakelaar.,yes,no
+[Enkelpolige schakeling] Wat betekent 2 = L+S op het leidingschema?,2 draden: de fasedraad en de schakeldraad,2 lampen,2 schakelaars,,,,A,"L = fasedraad, S = schakeldraad.",yes,no
+[Enkelpolige schakeling] Welke schakelaar gebruik je vaak in plaats van een enkelpolige schakelaar?,Een wisselschakelaar,Een dubbelpolige schakelaar,Een serieschakelaar,,,,A,"Bruin op de middelste klem, zwart op een buitenste klem. De derde klem blijft vrij.",yes,no
+[Dubbelpolige schakeling] Waarom is een dubbelpolige schakelaar veiliger?,Hij onderbreekt de fase én de nul. De lamp is helemaal spanningsvrij.,Hij is groter.,Hij heeft een lampje.,,,,A,Fase en nul onderbroken = helemaal spanningsvrij.,yes,no
+[Dubbelpolige schakeling] Waar is een dubbelpolige schakelaar verplicht volgens het AREI?,In de badkamer,In de slaapkamer,In de gang,,,,A,In de badkamer is dubbelpolig verplicht.,yes,no
+[Dubbelpolige schakeling] Op welke klem komt de schakeldraad die terugkomt van de lamp?,2,1,L1,,,,A,Klem 1: schakeldraad naar de lamp. Klem 2: schakeldraad terug van de lamp.,yes,no
+[Serieschakelaar (dubbele aansteking)] Kan je met een serieschakelaar één lamp bedienen vanaf 2 plaatsen?,"Nee, daarvoor heb je een wisselschakeling nodig.","Ja, daar dient hij voor.",,,,,A,Twee plaatsen = wisselschakeling.,no,no
+[Serieschakelaar (dubbele aansteking)] Onderbreekt een serieschakelaar ook de nuldraad?,"Nee, alleen de fasedraad.","Ja, altijd.",,,,,A,Net als bij enkelpolig: alleen de fasedraad.,no,no
+[Serieschakelaar (dubbele aansteking)] Wat betekent L+S+S bij de leiding naar S1?,3 draden: 1 fasedraad en 2 schakeldraden,3 lampen,3 schakelaars,,,,A,"L = fasedraad, S = schakeldraad.",yes,no
+[Serieschakelaar (dubbele aansteking)] Waar is een serieschakelaar handig?,"In een leefruimte met 2 lichtgroepen, bediend vanaf 1 plaats",Op een trap met 2 schakelaars,"In een badkamer, voor de veiligheid",,,,A,"Twee lichtgroepen, één plaats.",yes,no
+[Wisselschakeling] Je wisselt draad 1 en 1″ om. Wat gebeurt er?,Alleen de stand van de knoppen verandert. De schakeling werkt nog.,De lamp brandt nooit meer.,Er ontstaat kortsluiting.,,,,A,De schakeling werkt nog. Alleen de stand van de knoppen is anders.,yes,no
+[Wisselschakeling] Mag je een wisselschakeling in een badkamer gebruiken?,"Nee, niet in vochtige ruimtes.","Ja, overal.",,,,,A,Niet in vochtige ruimtes.,no,no
+[Wisselschakeling] Op welke klem van S2 komt de schakeldraad naar de lamp?,L,1,1″,,,,A,Op S2 is klem L de schakeldraad naar de lamp.,no,no
+[Wisselschakeling] Wanneer brandt E1 in een wisselschakeling?,Als S1 en S2 op dezelfde schakeldraad staan.,Alleen als S1 aan staat.,Als S1 en S2 allebei uit staan.,,,,A,De stroom moet een weg vinden van S1 naar S2.,yes,no
+[Kruisschakeling] Je wil één lamp bedienen vanaf 4 plaatsen. Wat heb je nodig?,2 wisselschakelaars en 2 kruisschakelaars,4 kruisschakelaars,4 wisselschakelaars,,,,A,Wissel – kruis – kruis – wissel.,yes,no
+[Kruisschakeling] Wat doet de kruisschakelaar met de 2 schakeldraden?,Hij laat ze recht door of kruist ze.,Hij onderbreekt de nuldraad.,Hij verbindt ze met de aarding.,,,,A,Recht door of gekruist: zo verandert de weg van de stroom.,yes,no
+[Kruisschakeling] Waar sluit je de schakeldraden van S1 aan op de kruisschakelaar?,Op de 2 linkse klemmen,Op de 2 rechtse klemmen,Op de aarding,,,,A,Links: de draden van S1. Rechts: de draden naar S3.,yes,no
+[Kruisschakeling] Een trap met 3 verdiepingen. Welke schakelaar komt op verdiep 1?,Een kruisschakelaar,Een wisselschakelaar,Een serieschakelaar,,,,A,Verdiep 0 en 2: wissel. Verdiep 1 (midden): kruis.,yes,no

@@ -1,0 +1,15 @@
+Question,A,B,C,D,E,F,Answer,Rationale,RandomOrder,MultiColumn
+[Kleuren en kabeldiktes] Waarom hebben draden vaste kleuren?,Zo weet iedereen wat elke draad doet.,Omdat het mooi is.,Om ze goedkoper te maken.,,,,A,Vaste kleuren = veilig werken.,yes,no
+"[Volt, ampère, ohm en watt in het schema] Hoeveel volt staat er tussen de fasedraad en de nuldraad in huis?",230 V,9 V,48 V,,,,A,In huis is de spanning 230 V.,yes,no
+[Enkelpolige schakeling] Wat bedien je met een enkelpolige schakelaar?,"Eén lamp of lampgroep, vanaf één plaats","Eén lamp, vanaf twee plaatsen",Twee lampen apart,,,,A,"Eén lamp, één plaats.",yes,no
+[Enkelpolige schakeling] Welke kleur heeft de schakeldraad?,Zwart,Bruin,Blauw,,,,A,De schakeldraad is zwart.,no,no
+[Enkelpolige schakeling] Welke draad onderbreekt een enkelpolige schakelaar?,De fasedraad,De nuldraad,Beide draden,,,,A,De schakelaar onderbreekt alleen de fasedraad.,yes,no
+[Dubbelpolige schakeling] Wat onderbreekt een dubbelpolige schakelaar?,De fasedraad en de nuldraad,Alleen de fasedraad,Alleen de nuldraad,,,,A,"Dubbelpolig: twee contacten, in de fasedraad én in de nuldraad.",yes,no
+[Dubbelpolige schakeling] Hoeveel contacten heeft een dubbelpolige schakelaar?,2,1,4,,,,A,"Eén contact in de fasedraad, één in de nuldraad.",yes,no
+[Dubbelpolige schakeling] In welke ruimte gebruik je een dubbelpolige schakelaar?,In de badkamer,In de slaapkamer,Op de trap,,,,A,"In vochtige ruimtes, zoals de badkamer.",yes,no
+[Serieschakelaar (dubbele aansteking)] Wat bedien je met een serieschakelaar?,"2 lampen, elk apart, vanaf 1 plaats",1 lamp vanaf 2 plaatsen,1 lamp vanaf 3 plaatsen,,,,A,"Serieschakelaar: 2 lampgroepen apart, vanaf 1 plaats.",yes,no
+[Serieschakelaar (dubbele aansteking)] Hoeveel knoppen heeft een serieschakelaar?,2,1,3,,,,A,Twee knoppen voor twee lampgroepen.,yes,no
+[Wisselschakeling] Vanaf hoeveel plaatsen bedien je één lamp met een wisselschakeling?,2 plaatsen,1 plaats,3 plaatsen,,,,A,Wisselschakeling: 2 plaatsen.,yes,no
+[Wisselschakeling] Waar gebruik je een wisselschakeling?,Onderaan en bovenaan de trap,In een kleine berging met één deur,In een badkamer,,,,A,"Eén lamp, twee plaatsen. Niet in vochtige ruimtes.",yes,no
+[Kruisschakeling] Vanaf hoeveel plaatsen bedien je één lamp met een kruisschakeling?,3 of meer plaatsen,1 plaats,2 plaatsen,,,,A,Kruisschakeling: 3 of meer plaatsen.,yes,no
+[Kruisschakeling] Waar staat de kruisschakelaar?,Tussen twee wisselschakelaars,Naast de lamp,In de groepenkast,,,,A,Je begint en eindigt met een wisselschakelaar.,yes,no

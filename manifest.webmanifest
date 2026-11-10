@@ -1,0 +1,17 @@
+{
+  "name": "Elektriciteit stap voor stap",
+  "short_name": "Elektriciteit",
+  "description": "Leren en oefenen: de basis van elektriciteit voor 2B STEM Realisaties, St.-Jozefinstituut Schoten.",
+  "lang": "nl-BE",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0B0F0D",
+  "theme_color": "#003000",
+  "icons": [
+    {"src": "icons/icoon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icons/icoon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "icons/icoon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

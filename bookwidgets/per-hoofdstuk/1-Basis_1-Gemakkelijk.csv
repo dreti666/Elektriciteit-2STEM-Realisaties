@@ -1,0 +1,27 @@
+Question,A,B,C,D,E,F,Answer,Rationale,RandomOrder,MultiColumn
+[Veilig werken] Is dit veilig of niet veilig? Je werkt met natte handen.,Veilig,Niet veilig,,,,,B,Water geleidt. Werk altijd met droge handen.,no,no
+[Veilig werken] Is dit veilig of niet veilig? Je werkt met droge handen.,Veilig,Niet veilig,,,,,A,Goed zo. Droge handen zijn veiliger.,no,no
+[Veilig werken] Is dit veilig of niet veilig? Een kabel is kapot. Je gebruikt hem toch.,Veilig,Niet veilig,,,,,B,Een kapotte kabel is gevaarlijk. Meld het aan de leraar.,no,no
+[Veilig werken] Is dit veilig of niet veilig? Je test eerst met een spanningstester.,Veilig,Niet veilig,,,,,A,Zo weet je zeker dat er geen spanning is.,no,no
+[Veilig werken] Je twijfelt of iets veilig is. Wat doe je?,Ik stop en vraag het aan de leraar.,Ik probeer het gewoon.,Ik vraag het aan een klasgenoot die het ook niet weet.,,,,A,Twijfel je? Stop en vraag het aan de leraar.,yes,no
+[Geleiders en isolatoren] Geleider of isolator? Koper,Geleider,Isolator,,,,,A,Koper is een metaal. Metaal geleidt.,no,no
+[Geleiders en isolatoren] Geleider of isolator? Kunststof (plastic),Geleider,Isolator,,,,,B,Kunststof laat geen stroom door.,no,no
+[Geleiders en isolatoren] Geleider of isolator? Rubber,Geleider,Isolator,,,,,B,Rubber laat geen stroom door.,no,no
+[Geleiders en isolatoren] Geleider of isolator? Een ijzeren sleutel,Geleider,Isolator,,,,,A,IJzer is een metaal. Metaal geleidt.,no,no
+[Geleiders en isolatoren] Gaat stroom goed door metaal?,"Ja, metaal is een geleider.","Nee, metaal is een isolator.",,,,,A,Metalen zoals koper en aluminium zijn goede geleiders.,no,no
+[Geleiders en isolatoren] Waarom heeft een schroevendraaier een kunststof handvat?,Kunststof is een isolator. Het beschermt je hand.,Kunststof is een geleider.,Het is gewoon mooier.,,,,A,Kunststof laat geen stroom door. Zo ben je beschermd.,yes,no
+[Onderdelen en symbolen] Welk onderdeel is een verbruiker?,Lamp,Batterij,Draad,,,,A,Een lamp gebruikt energie. Een lamp is een verbruiker.,yes,no
+[Onderdelen en symbolen] Wat doet een schakelaar?,Hij opent en sluit de kring.,Hij maakt stroom.,Hij meet de spanning.,,,,A,Met een schakelaar zet je de stroom aan en uit.,yes,no
+[Onderdelen en symbolen] Wat is een bron?,"Iets dat energie geeft, zoals een batterij","Iets dat energie gebruikt, zoals een lamp",Een draad,,,,A,Een bron geeft energie.,yes,no
+[De stroomkring] De stroom kan niet rond. Hoe heet zo'n kring?,Een open kring,Een gesloten kring,,,,,A,Een open kring: de stroom kan niet rond.,no,no
+[Serie en parallel] Hoe zijn de lampen in je huis geschakeld?,In parallel,In serie,,,,,A,In parallel. Zo kan je elke lamp apart aan- en uitzetten.,no,no
+[Serie en parallel] Hoeveel wegen heeft de stroom in een serieschakeling?,Eén weg,Twee wegen,Geen weg,,,,A,In serie staan de lampen na elkaar: één weg.,yes,no
+[Serie en parallel] In welke schakeling heeft elke lamp een eigen weg?,Parallel,Serie,,,,,A,In parallel heeft elke lamp een eigen weg.,no,no
+[Grootheden en eenheden] Hoeveel spanning heeft een stopcontact in België?,230 V,9 V,"1,5 V",,,,A,Een stopcontact: 230 V. Dat is gevaarlijk.,yes,no
+[Grootheden en eenheden] Bij welke eenheid hoort het teken Ω?,ohm,ampère,volt,,,,A,Ω is het teken van ohm.,yes,no
+[Grootheden en eenheden] In welke eenheid meet je vermogen?,watt (W),volt (V),ohm (Ω),,,,A,Vermogen meet je in watt.,yes,no
+[De wet van Ohm] Wat is de wet van Ohm?,U = R × I,U = R + I,U = I : R,,,,A,Spanning = weerstand × stroom.,yes,no
+[De wet van Ohm] De weerstand wordt groter. De spanning blijft gelijk. Wat gebeurt er met de stroom?,De stroom wordt kleiner.,De stroom wordt groter.,De stroom blijft gelijk.,,,,A,Meer weerstand: minder stroom.,yes,no
+[Meten met de multimeter] Wat meet je met een multimeter?,"Spanning, stroom en weerstand",Alleen de temperatuur,De lengte van een draad,,,,A,"Multi = veel. Hij meet spanning, stroom en weerstand.",yes,no
+[Meten met de multimeter] Je bent klaar met meten. Op welke stand zet je de knop?,OFF (uit),Ω,A,,,,A,Zet de multimeter altijd uit als je klaar bent.,yes,no
+[De led] Is een led zuinig?,"Ja, een led is zuinig en gaat lang mee.","Nee, een led verbruikt heel veel.",,,,,A,Een led verbruikt weinig.,no,no

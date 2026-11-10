@@ -1,0 +1,26 @@
+Question,A,B,C,D,E,F,Answer,Rationale,RandomOrder,MultiColumn
+[Veilig werken] Je moet een stopcontact vervangen. Wat doe je eerst?,De spanning uitzetten,Testen met een spanningstester,Het stopcontact losschroeven,,,,A,Eerst zet je de spanning uit. Daarna beveilig je en test je.,yes,no
+[Veilig werken] De spanning staat uit. Wat is de volgende stap?,Zorgen dat niemand de spanning terug aanzet: een slot of een bordje,Meteen beginnen met werken,De lamp vastschroeven,,,,A,Stap 2: beveiligen tegen terug inschakelen.,yes,no
+[Veilig werken] Is dit veilig of niet veilig? Je gebruikt een schroevendraaier met isolatie (VDE).,Veilig,Niet veilig,,,,,A,De isolatie beschermt je hand.,no,no
+[Veilig werken] Is dit veilig of niet veilig? Je trekt aan de kabel om de stekker uit te trekken.,Veilig,Niet veilig,,,,,B,"Trek altijd aan de stekker, niet aan de kabel.",no,no
+[Veilig werken] Is dit veilig of niet veilig? Je hangt een bordje: niet inschakelen.,Veilig,Niet veilig,,,,,A,Zo zet niemand de spanning per ongeluk terug aan.,no,no
+[Veilig werken] Is dit veilig of niet veilig? Je werkt aan een stopcontact. De spanning staat nog aan.,Veilig,Niet veilig,,,,,B,Zet altijd eerst de spanning uit.,no,no
+[Veilig werken] Welke schakelaar beschermt jou tegen een elektrische schok?,De differentieelschakelaar,Een enkelpolige schakelaar,Een wisselschakelaar,,,,A,De differentieelschakelaar schakelt uit als er stroom weglekt.,yes,no
+[Geleiders en isolatoren] Geleider of isolator? Aluminiumfolie,Geleider,Isolator,,,,,A,Aluminium is een metaal. Metaal geleidt.,no,no
+[Geleiders en isolatoren] Geleider of isolator? Glas,Geleider,Isolator,,,,,B,Glas laat geen stroom door.,no,no
+[Geleiders en isolatoren] Geleider of isolator? Water uit de kraan,Geleider,Isolator,,,,,A,Water uit de kraan geleidt. Pas op!,no,no
+[Geleiders en isolatoren] Geleider of isolator? Droog hout,Geleider,Isolator,,,,,B,Droog hout isoleert. Nat hout niet!,no,no
+[Geleiders en isolatoren] Wat doet de kunststof mantel rond een kabel?,Hij isoleert en beschermt jou.,Hij geleidt de stroom.,Hij maakt de stroom sterker.,,,,A,De mantel is een isolator.,yes,no
+[De stroomkring] Wat heb je nodig voor een gesloten kring?,"Een bron, draden en een verbruiker. Alles is verbonden.",Alleen een lamp.,"Een batterij en een lamp, zonder draden.",,,,A,De stroom moet helemaal rond kunnen.,yes,no
+[De stroomkring] In welke stand moet de schakelaar staan om de lamp te laten branden?,Dicht (gesloten),Open,,,,,A,Een dichte schakelaar sluit de kring.,no,no
+[Serie en parallel] In welke schakeling branden de lampen zwakker?,In serie,In parallel,,,,,A,In serie delen de lampen de spanning. Ze branden zwakker.,no,no
+[Serie en parallel] Je haalt in een serieschakeling een lamp weg. Wat gebeurt er?,Alle lampen gaan uit.,Alleen die lamp gaat uit.,De andere lampen branden feller.,,,,A,De enige weg is onderbroken.,yes,no
+[Grootheden en eenheden] Op een lamp staat: 5 W. Wat betekent W?,Watt: het vermogen,Volt: de spanning,Weerstand,,,,A,W staat voor watt. Dat is het vermogen.,yes,no
+[Grootheden en eenheden] Welke letter gebruik je in een formule voor spanning?,U,V,S,,,,A,"Spanning: letter U, eenheid volt (V).",yes,no
+[Grootheden en eenheden] Welke letter gebruik je in een formule voor stroom?,I,A,S,,,,A,"Stroom: letter I, eenheid ampère (A).",yes,no
+[De wet van Ohm] Je zoekt I. Welke formule gebruik je?,I = U : R,I = U × R,I = R : U,,,,A,Leg je vinger op I: je ziet U boven R.,yes,no
+[Meten met de multimeter] Je wil weten hoeveel stroom door een lamp gaat. Welke stand?,A,V⎓,Ω,,,,A,Stroom meet je in ampère: stand A.,yes,no
+[Meten met de multimeter] Je meet de weerstand van een onderdeel. Welke stand?,Ω,V~,A,,,,A,Weerstand meet je in ohm: stand Ω.,yes,no
+[Meten met de multimeter] Welke stand gebruik je voor een stopcontact? (Alleen samen met de leraar!),V~,V⎓,Ω,,,,A,Een stopcontact geeft wisselspanning: V~.,yes,no
+[De led] Waarom heeft een led een weerstand nodig?,Anders gaat er te veel stroom door en gaat de led kapot.,Anders brandt de led te zwak.,Een led heeft geen weerstand nodig.,,,,A,De weerstand beperkt de stroom.,yes,no
+[De led] Waar plaats je de weerstand bij een led?,In serie met de led: in dezelfde draad,"Los naast de batterij, zonder verbinding",Een led heeft geen weerstand nodig,,,,A,De weerstand staat in serie met de led. Zo gaat dezelfde stroom erdoor.,yes,no

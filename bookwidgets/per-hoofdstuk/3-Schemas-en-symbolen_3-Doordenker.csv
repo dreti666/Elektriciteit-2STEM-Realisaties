@@ -1,0 +1,9 @@
+Question,A,B,C,D,E,F,Answer,Rationale,RandomOrder,MultiColumn
+[Eenlijnig en meerlijnig] Wat betekent 3 = S+N+A?,"3 draden: schakeldraad, nuldraad en aarding",3 schakelaars,3 lampen,,,,A,"S = schakeldraad, N = nuldraad, A = aarding.",yes,no
+[Eenlijnig en meerlijnig] Bij een leiding staat het cijfer 4. Wat betekent dat?,Er zitten 4 draden in die leiding.,Er hangen 4 lampen.,De leiding is 4 meter lang.,,,,A,Het cijfer = het aantal draden.,yes,no
+[Eenlijnig en meerlijnig] Je moet alle draden met hun kleur tonen. Hoe teken je?,Meerlijnig,Eenlijnig,,,,,A,Kleuren per draad: meerlijnig.,no,no
+[Eenlijnig en meerlijnig] Waarom gebruik je op een plan van een huis eenlijnige symbolen?,Het plan blijft overzichtelijk.,Het is verplicht om in kleur te tekenen.,Dan heb je minder draden nodig.,,,,A,Eenlijnig houdt het plan duidelijk.,yes,no
+[Drie soorten schema's] Je moet de draden aansluiten in de doos. Welk schema gebruik je?,Bedradingschema,Leidingschema,Stroomkringschema,,,,A,Het bedradingschema toont op welke klem elke draad komt.,no,no
+[Drie soorten schema's] Je zoekt waar de schakelaar in de kamer komt. Welk schema gebruik je?,Leidingschema,Bedradingschema,Stroomkringschema,,,,A,Het leidingschema toont de plaats.,no,no
+[Drie soorten schema's] Je wil uitleggen waarom de lamp brandt als S1 dicht is. Welk schema gebruik je?,Stroomkringschema,Leidingschema,Bedradingschema,,,,A,Het stroomkringschema toont de weg van de stroom.,no,no
+[Drie soorten schema's] In welke volgorde maak je de schema's meestal?,Stroomkringschema → leidingschema → bedradingschema,Bedradingschema → leidingschema → stroomkringschema,De volgorde maakt niet uit,,,,A,"Eerst hoe het werkt, dan waar het komt, dan hoe je aansluit.",yes,no

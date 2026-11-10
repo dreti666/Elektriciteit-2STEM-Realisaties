@@ -1,0 +1,23 @@
+Question,A,B,C,D,E,F,Answer,Rationale,RandomOrder,MultiColumn
+[Zonne-energie] Wat doet de omvormer?,Hij maakt wisselspanning van 230 V voor in huis.,Hij maakt het paneel schoon.,Hij bewaart stroom.,,,,A,De omvormer maakt van DC wisselspanning (AC).,yes,no
+[Zonne-energie] Waaruit bestaat een zonnepaneel?,Uit veel kleine zonnecellen,Uit een generator,Uit wieken,,,,A,Een paneel bestaat uit zonnecellen.,yes,no
+[Zonne-energie] Is deze energie duurzaam? Zonne-energie,Duurzaam,Niet duurzaam,,,,,A,De zon raakt nooit op.,no,no
+[Zonne-energie] Is deze energie duurzaam? Steenkool,Duurzaam,Niet duurzaam,,,,,B,Steenkool raakt op en vervuilt de lucht.,no,no
+[Zonne-energie] Is deze energie duurzaam? Windenergie,Duurzaam,Niet duurzaam,,,,,A,Wind raakt nooit op.,no,no
+[Zonne-energie] Is deze energie duurzaam? Aardgas,Duurzaam,Niet duurzaam,,,,,B,Aardgas raakt op.,no,no
+[Windenergie] Waarin meet je de windsnelheid?,In meter per seconde (m/s),In watt,In volt,,,,A,Windsnelheid: m/s of km/u.,yes,no
+[Windenergie] Hoeveel km/u is 10 m/s?,36 km/u,10 km/u,100 km/u,,,,A,"10 × 3,6 = 36 km/u.",yes,no
+[Windenergie] Met welke schaal geef je de windkracht aan?,De schaal van Beaufort,De schaal van Celsius,De schaal van Richter,,,,A,Beaufort: van 0 (windstil) tot 12 (orkaan).,yes,no
+[Windenergie] Waarom is windenergie duurzaam?,De wind raakt nooit op.,Windturbines zijn groot.,Wind is gratis te koop.,,,,A,Wind raakt niet op.,yes,no
+[Energiewoning: Zonnepanelen] Op het dak liggen 8 panelen van 400 Wp. Hoeveel Wp is dat samen?,408 Wp,800 Wp,3200 Wp,,,,C,8 × 400 Wp = 3200 Wp.,yes,no
+[Energiewoning: Zonnepanelen] Om 13 u leveren de panelen 2310 W. Hoeveel leveren ze om 21 u?,1155 W,2310 W,0 W,,,,C,Om 21 u is het donker. Zonder licht geen stroom.,yes,no
+[Energiewoning: Zonnepanelen] Wat doet de omvormer?,Hij maakt van gelijkspanning (DC) wisselspanning (AC) van 230 V.,Hij bewaart stroom.,Hij meet het verbruik.,,,,A,Panelen geven DC. In huis gebruik je AC van 230 V.,yes,no
+"[Energiewoning: Windenergie] De wind waait 6 m/s. Hoeveel km/u is dat? (Van m/s naar km/u: × 3,6.)","21,6 km/u","1,7 km/u",60 km/u,,,,A,"6 × 3,6 = 21,6 km/u.",yes,no
+[Energiewoning: Windenergie] Het is windkracht 4 op de schaal van Beaufort. Hoe noem je die wind?,storm,matig,windstil,,,,B,Windkracht 4 is matig.,yes,no
+[Energiewoning: Windenergie] Waarom is een verticale windturbine handig bij een huis?,Ze werkt ook zonder wind.,Ze vangt wind uit elke richting en is stil.,Ze geeft altijd 600 W.,,,,B,De as staat rechtop. Ze hoeft niet naar de wind te draaien.,yes,no
+[Energiewoning: Verbruik en het net] Je gamet 2 uur met de PlayStation en tv (300 W). Hoeveel energie is dat? (Energie (kWh) = vermogen (kW) × tijd (uur).),600 kWh,6 kWh,"0,6 kWh",,,,C,"300 W = 0,3 kW. 0,3 × 2 = 0,6 kWh.",yes,no
+[Energiewoning: Verbruik en het net] Wat telt de digitale meter?,Hoeveel zon er schijnt.,Hoe hard het waait.,Hoeveel stroom je van het net neemt en hoeveel je naar het net stuurt.,,,,C,De digitale meter telt afname en injectie apart.,yes,no
+[Energiewoning: Verbruik en het net] Welk toestel verbruikt het meest?,Gsm opladen (15 W),Router (10 W),Haardroger (1800 W),,,,C,1800 W is veel meer dan 15 W of 10 W.,yes,no
+"[Energiewoning: Batterij] De thuisbatterij kan 5 kWh bewaren. Ze is 60% vol. Hoeveel kWh zit erin? (10% van 5 kWh is 0,5 kWh.)",30 kWh,3 kWh,60 kWh,,,,B,60% van 5 kWh = 3 kWh.,yes,no
+[Energiewoning: Batterij] Wanneer laat je de wasmachine (2000 W) best draaien?,Om 13 u: dan leveren de panelen 2310 W.,Om 22 u: dan is het donker.,,,,,A,Zo gebruik je je eigen zonnestroom.,yes,no
+[Energiewoning: Batterij] De batterij is vol en er is nog overschot. Waar gaat de stroom naartoe?,Terug naar de zonnepanelen.,"Nergens, de stroom verdwijnt.",Naar het net (injectie).,,,,C,"Is de batterij vol, dan gaat het overschot naar het net.",yes,no
