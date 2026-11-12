@@ -1,8 +1,0 @@
-Question,A,B,C,D,E,F,Answer,Rationale,RandomOrder,MultiColumn
-[Eenlijnig en meerlijnig] Hoe heet tekenen met elke draad apart?,Meerlijnig,Eenlijnig,,,,,A,Meerlijnig: elke draad een eigen lijn.,no,no
-[Eenlijnig en meerlijnig] Wat betekent eenlijnig tekenen?,Alle draden samen als één lijn,Elke draad apart,,,,,A,Eenlijnig: één lijn voor alle draden.,no,no
-[Eenlijnig en meerlijnig] Wat betekent 3 = L+N+A?,"3 draden: fasedraad, nuldraad en aarding",3 lampen,3 schakelaars,,,,A,"L = fasedraad, N = nuldraad, A = aarding.",yes,no
-[Drie soorten schema's] Op welk schema zie je waar de lamp in de kamer hangt?,Leidingschema,Stroomkringschema,Bedradingschema,,,,A,Het leidingschema toont waar alles zit.,no,no
-[Drie soorten schema's] Welk schema toont hoe de schakeling werkt?,Leidingschema,Stroomkringschema,Bedradingschema,,,,B,Het stroomkringschema toont hoe het werkt.,no,no
-[Drie soorten schema's] Op welk schema zie je de kleur van elke draad?,Leidingschema,Stroomkringschema,Bedradingschema,,,,C,Het bedradingschema toont elke draad met zijn kleur.,no,no
-[Drie soorten schema's] Hoeveel soorten schema's leer je?,3,1,5,,,,A,"Stroomkringschema, leidingschema en bedradingschema.",yes,no

@@ -1,23 +1,39 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
   "manifestVersion": "1.16",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "id": "43090de1-ec5e-5c83-8816-dbce3b3d7dfe",
   "developer": {
     "name": "Timmy De Rechter, St.-Jozefinstituut Schoten",
-    "websiteUrl": "https://dreti666.github.io/Elektriciteit-2STEM-Realisaties/",
-    "privacyUrl": "https://dreti666.github.io/Elektriciteit-2STEM-Realisaties/",
-    "termsOfUseUrl": "https://dreti666.github.io/Elektriciteit-2STEM-Realisaties/"
+    "websiteUrl": "https://www.timmyderechter.be/",
+    "privacyUrl": "https://www.timmyderechter.be/",
+    "termsOfUseUrl": "https://www.timmyderechter.be/"
   },
-  "name": { "short": "Elektriciteit", "full": "Elektriciteit stap voor stap" },
+  "name": {
+    "short": "Elektriciteit",
+    "full": "Elektriciteit stap voor stap"
+  },
   "description": {
     "short": "Leren en oefenen: de basis van elektriciteit voor 2B STEM Realisaties.",
     "full": "Leer- en oefenapp over de basis van elektriciteit voor 2B STEM Realisaties, St.-Jozefinstituut Schoten. 20 stappen in 4 hoofdstukken, oefeningen op drie niveaus (Gemakkelijk, Moeilijk, Doordenker) en een energiewoning met zonnepanelen, windturbine en batterij. Gemaakt door Timmy De Rechter, klastitularis 2B STEM Realisaties."
   },
-  "icons": { "color": "color.png", "outline": "outline.png" },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
   "accentColor": "#003000",
   "staticTabs": [
-    { "entityId": "elektriciteit", "name": "Elektriciteit", "contentUrl": "https://dreti666.github.io/Elektriciteit-2STEM-Realisaties/", "websiteUrl": "https://dreti666.github.io/Elektriciteit-2STEM-Realisaties/", "scopes": ["personal"] }
+    {
+      "entityId": "elektriciteit",
+      "name": "Elektriciteit",
+      "contentUrl": "https://www.timmyderechter.be/elektriciteit/",
+      "websiteUrl": "https://www.timmyderechter.be/elektriciteit/",
+      "scopes": [
+        "personal"
+      ]
+    }
   ],
-  "validDomains": ["dreti666.github.io"]
+  "validDomains": [
+    "www.timmyderechter.be"
+  ]
 }

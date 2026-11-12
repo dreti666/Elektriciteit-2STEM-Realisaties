@@ -1,3 +1,9 @@
+# www.timmyderechter.be
+
+Website met leer-apps voor 2B STEM Realisaties. De app *Elektriciteit stap voor stap* staat in de map `elektriciteit/` en is te vinden op **https://www.timmyderechter.be/elektriciteit/**.
+
+---
+
 # Elektriciteit stap voor stap
 
 <img src="icons/icoon-192.png" width="96" align="right" alt="Icoon van de app">
@@ -55,7 +61,7 @@ Voor **punten in het puntenboek van Teams** gebruik je **BookWidgets**. In de ma
 
 ## De app aanpassen
 
-Alles zit in één bestand: `index.html`. Na een aanpassing: bewaar, upload naar GitHub, en verhoog in `sw.js` de versie (`elek-v1` → `elek-v2`). Dan krijgen de leerlingen zeker de nieuwe versie.
+Alles zit in één bestand: `elektriciteit/index.html`. Na een aanpassing: bewaar, upload naar GitHub, en verhoog in `elektriciteit/sw.js` de versie (`elek-v1` → `elek-v2`). Dan krijgen de leerlingen zeker de nieuwe versie.
 
 ## Bestanden
 
