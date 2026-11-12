@@ -1482,13 +1482,32 @@ function instellingen(){
   const sw=(k,t,u)=>`<div class="schakel"><div><b>${t}</b><br><span class="klein">${u}</span></div><button class="knop ${S[k]?'vol':''}" data-act="set" data-k="${k}" aria-pressed="${!!S[k]}">${S[k]?'Aan':'Uit'}</button></div>`;
   return `<h1>Instellingen</h1><div class="kaart">
   <div class="schakel"><div style="flex:1"><b>Jouw naam</b><br><input type="text" id="naam" value="${esc(S.naam)}" placeholder="Voornaam" autocomplete="off"></div></div>
+  <div class="schakel"><div style="flex:1"><b>Jouw klas</b><br><input type="text" id="klas" value="${esc(S.klas||'')}" placeholder="bijvoorbeeld 2B" autocomplete="off"></div></div>
   ${sw('groot','Grote letters','Alle tekst wordt groter.')}
   ${sw('spreek','Voorleesknop','Toon de knop om tekst voor te lezen.')}
   ${sw('rustig','Rustige modus','Geen bewegende bolletjes in de schema\'s.')}
   </div>${stemKaart()}<button class="knop vol" data-act="go" data-v="home">Klaar</button>`;
 }
+/* ---- Resultaten naar het Microsoft Form van de leraar ----
+   Plak hieronder de vooraf ingevulde link van het formulier.
+   In die link: bij de vraag Klas staat KLAS, bij de vraag Resultaten staat RESULTATEN. */
+const FORMS_LINK='';
+function compactTekst(){
+  const z={ja:'kan ik',bijna:'bijna',nee:'nog niet'};let t=`Elektriciteit stap voor stap · ${new Date().toLocaleDateString('nl-BE')}\n`,n=0;
+  MODS.forEach(m=>{const r=S.res[m.id];if(!r)return;n++;t+=`${m.titel}: `+NIVEAUS.map(([k,naam])=>{const x=nivRes(m,k);return naam[0]+' '+(x?x.score+'/'+x.n:'-');}).join(' | ')+(r.zelf?` (zelf: ${z[r.zelf]})`:'')+'\n';});
+  EW.resultaten().forEach(r=>{n++;t+=`Energiewoning ${r.code} ${r.thema}: ${r.score!=null?r.score+'/'+r.n:'-'}\n`;});
+  if(!n)t+='Nog niets geoefend.\n';
+  return t.trim();
+}
+function formsUrl(){
+  try{const u=new URL(FORMS_LINK);const zet=(v,w)=>{const q=/^".*"$/.test(v);return q?'"'+w+'"':w;};
+    for(const [k,v] of [...u.searchParams]){const kaal=v.replace(/^"|"$/g,'').trim().toUpperCase();
+      if(kaal==='KLAS')u.searchParams.set(k,zet(v,S.klas||''));
+      else if(kaal==='RESULTATEN')u.searchParams.set(k,zet(v,compactTekst()));}
+    return u.toString();}catch(e){return '';}
+}
 function resultTekst(){
-  let t=`Resultaten Elektriciteit stap voor stap\nNaam: ${S.naam||'(geen naam)'}\n`;
+  let t=`Resultaten Elektriciteit stap voor stap\nNaam: ${S.naam||'(geen naam)'}${S.klas?' · Klas: '+S.klas:''}\n`;
   MODS.forEach(m=>{const r=S.res[m.id];t+=`- ${m.titel} (${m.lpd.join(', ')}): `+(r?NIVEAUS.map(([n,naam])=>{const x=nivRes(m,n);return naam+' '+(x?x.score+'/'+x.n:'-');}).join(', ')+`, zelf: ${({ja:'ik kan dit',bijna:'bijna',nee:'nog niet'})[r.zelf]||'-'}`:'nog niet geoefend')+'\n';});
   EW.resultaten().forEach(r=>{t+=`- Energiewoning, scenario ${r.code}, ${r.thema}: ${r.score!=null?r.score+'/'+r.n:'-'}, zelf: ${({ja:'ik begrijp het',bijna:'bijna',nee:'nog niet'})[r.zelf]||'-'}\n`;});
   return t;
@@ -1499,7 +1518,8 @@ function resultaten(){
   h+=`</table><p class="klein">Score = je laatste poging. Sterren = je beste poging.</p></div>`;
   const er=EW.resultaten();if(er.length)h+=`<div class="kaart"><h2>De energiewoning</h2><table><tr><th>Scenario</th><th>Onderwerp</th><th>Score</th><th>Zelf</th></tr>${er.map(r=>`<tr><td>${r.code}</td><td>${r.thema}</td><td>${r.score!=null?r.score+'/'+r.n:'-'}</td><td>${r.zelf?({ja:'Ik begrijp het',bijna:'Bijna',nee:'Nog niet'})[r.zelf]:'-'}</td></tr>`).join('')}</table></div>`;
   h+=`
-  <div class="kaart"><p>Geef je resultaten aan je leraar: tik op de knop en plak de tekst in Teams.</p><button class="knop vol" data-act="kopieer">Kopieer mijn resultaten</button><div id="kopmsg" class="klein" style="margin-top:8px"></div></div>`;
+  ${FORMS_LINK?`<div class="kaart"><h2>Stuur naar je leraar</h2><p>Tik op de knop. Er opent een formulier van je leraar met je resultaten al ingevuld. Kijk alles na en tik op <b>Verzenden</b>.</p>${S.klas?'':`<div class="melding bijna"><div>Vul eerst je <b>klas</b> in bij <button class="knop" data-act="go" data-v="instellingen" style="min-height:40px;padding:4px 12px">Instellingen</button></div></div>`}<button class="knop vol" data-act="stuur">Stuur naar mijn leraar</button>${S.verstuurd?`<p class="klein">Laatst verstuurd: ${S.verstuurd}</p>`:''}</div>`:''}
+  <div class="kaart"><p>${FORMS_LINK?'Of kopieer je resultaten en plak ze in Teams.':'Geef je resultaten aan je leraar: tik op de knop en plak de tekst in Teams.'}</p><button class="knop ${FORMS_LINK?'':'vol'}" data-act="kopieer">Kopieer mijn resultaten</button><div id="kopmsg" class="klein" style="margin-top:8px"></div></div>`;
   return h;
 }
 function leraar(){
@@ -1525,7 +1545,7 @@ document.addEventListener('click',e=>{
   if(a==='zoom'){el.closest('.lijst-woord').classList.toggle('groot');return;}
   if(a==='stem'){S.stem=el.dataset.n;bewaar();rerender();spreek('Hallo! Zo klink ik.');return;}
   if(a==='teststem'){spreek('Hallo! Ik lees de tekst voor. Welkom bij elektriciteit stap voor stap.');return;}
-  if(a==='go'){if(V.view==='instellingen'){const n=document.getElementById('naam');if(n){S.naam=n.value.trim().slice(0,30);bewaar();}}V={view:el.dataset.v};render();return;}
+  if(a==='go'){if(V.view==='instellingen'){const n=document.getElementById('naam'),kl=document.getElementById('klas');if(n){S.naam=n.value.trim().slice(0,30);}if(kl){S.klas=kl.value.trim().toUpperCase().slice(0,12);}bewaar();}V={view:el.dataset.v};render();return;}
   if(a==='mod'){V={view:'module',mod:el.dataset.id,tab:'leren',kaart:0,demo:demoStart()};render();return;}
   if(a==='tab'){V.tab=el.dataset.t;if(V.tab==='oef'){V.niv=null;V.oef=null;}else V.kaart=0;render();return;}
   if(a==='niv'){V.niv=+el.dataset.n;startOef(mod(V.mod));render();return;}
@@ -1563,7 +1583,8 @@ document.addEventListener('click',e=>{
   if(a==='zelf'){const m=mod(V.mod);S.res[m.id]=Object.assign(S.res[m.id]||{best:0},{zelf:k});bewaar();rerender();return;}
   if(a==='opnieuw'){startOef(mod(V.mod));render();return;}
   if(a==='nivvolgend'){V.niv++;startOef(mod(V.mod));render();return;}
-  if(a==='set'){S[k]=!S[k];const n=document.getElementById('naam');if(n)S.naam=n.value.trim().slice(0,30);bewaar();pasToe();rerender();return;}
+  if(a==='set'){S[k]=!S[k];const n=document.getElementById('naam'),kl=document.getElementById('klas');if(n)S.naam=n.value.trim().slice(0,30);if(kl)S.klas=kl.value.trim().toUpperCase().slice(0,12);bewaar();pasToe();rerender();return;}
+  if(a==='stuur'){const u=formsUrl();if(u){S.verstuurd=new Date().toLocaleDateString('nl-BE');bewaar();window.open(u,'_blank','noopener');rerender();}return;}
   if(a==='kopieer'){const t=resultTekst();const msg=document.getElementById('kopmsg');
     try{navigator.clipboard.writeText(t).then(()=>{msg.textContent='Gekopieerd. Plak het nu in Teams.';},()=>{toonTekst(msg,t);});}catch(err){toonTekst(msg,t);}return;}
   if(a==='wis'){const d=document.getElementById('wismsg');if(!V.wisVraag){V.wisVraag=true;d.innerHTML='<p>Zeker? Tik nog een keer om te wissen.</p>';return;}S.res={};bewaar();V.wisVraag=false;d.innerHTML='<p>Alle resultaten zijn gewist.</p>';return;}
