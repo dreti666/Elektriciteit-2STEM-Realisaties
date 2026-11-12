@@ -1,0 +1,34 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'be.sjs.elektriciteit'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'be.sjs.elektriciteit'
+        minSdk 24
+        targetSdk 34
+        versionCode((System.getenv('GITHUB_RUN_NUMBER') ?: '1').toInteger())
+        versionName "1.${versionCode}"
+    }
+
+    // Vaste ondertekening: zo installeert elke nieuwe APK over de vorige heen.
+    signingConfigs {
+        release {
+            storeFile file('elektriciteit.keystore')
+            storePassword 'elektriciteit'
+            keyAlias 'elektriciteit'
+            keyPassword 'elektriciteit'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

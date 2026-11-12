@@ -261,6 +261,14 @@ function pasToe(){document.body.classList.toggle('groot',!!S.groot);document.bod
 pasToe();
 
 /* ---------- voorlezen ---------- */
+/* In de Android-app (APK) leest Android zelf voor via de brug AndroidTTS. */
+if(window.AndroidTTS){
+  const ss={speak(u){try{AndroidTTS.spreek(u.text,u.rate||1);}catch(e){}},cancel(){try{AndroidTTS.stop();}catch(e){}},resume(){},pause(){},
+    getVoices(){return [{name:'Stem van Android',lang:'nl-BE',default:true,localService:true,voiceURI:'android'}];},addEventListener(){},speaking:false};
+  const Utt=function(t){this.text=t;this.lang='nl-BE';this.rate=1;this.voice=null;this.onerror=null;};
+  try{Object.defineProperty(window,'speechSynthesis',{configurable:true,writable:true,value:ss});}catch(e){}
+  try{Object.defineProperty(window,'SpeechSynthesisUtterance',{configurable:true,writable:true,value:Utt});}catch(e){}
+}
 let stemmen=[],alleStemmen=[];
 const kanSpreken=('speechSynthesis' in window)&&('SpeechSynthesisUtterance' in window);
 function laadStemmen(){try{alleStemmen=speechSynthesis.getVoices();stemmen=alleStemmen.filter(v=>/^nl/i.test(v.lang));if(V&&V.view==='instellingen')rerender();}catch(e){}}
@@ -1488,6 +1496,8 @@ function instellingen(){
   ${sw('rustig','Rustige modus','Geen bewegende bolletjes in de schema\'s.')}
   </div>${stemKaart()}<button class="knop vol" data-act="go" data-v="home">Klaar</button>`;
 }
+/* Terugknop van Android: eerst naar het startscherm. */
+window.terug=function(){if(V&&V.view!=='home'){V={view:'home'};render();return true;}return false;};
 /* ---- Resultaten naar het Microsoft Form van de leraar ----
    Plak hieronder de vooraf ingevulde link van het formulier.
    In die link: bij de vraag Klas staat KLAS, bij de vraag Resultaten staat RESULTATEN. */
