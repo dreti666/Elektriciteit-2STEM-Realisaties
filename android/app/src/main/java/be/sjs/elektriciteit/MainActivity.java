@@ -5,6 +5,14 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
+import android.speech.tts.Voice;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceError;
@@ -84,10 +92,52 @@ public class MainActivity extends Activity {
         public boolean klaar() { return ttsKlaar; }
 
         @JavascriptInterface
-        public void spreek(String tekst, float snelheid) {
+        public void spreek(String tekst, float snelheid) { spreekMet(tekst, snelheid, ""); }
+
+        /** Lees voor met een gekozen stem (id = naam van de Android-stem). */
+        @JavascriptInterface
+        public void spreekMet(String tekst, float snelheid, String id) {
             if (!ttsKlaar || tekst == null) return;
             tts.setSpeechRate(snelheid > 0 ? snelheid : 1f);
+            if (id != null && !id.isEmpty()) {
+                try {
+                    Set<Voice> alle = tts.getVoices();
+                    if (alle != null) for (Voice v : alle) if (id.equals(v.getName())) { tts.setVoice(v); break; }
+                } catch (Exception ignored) { }
+            }
             tts.speak(tekst, TextToSpeech.QUEUE_ADD, null, "z" + System.nanoTime());
+        }
+
+        /** Alle Nederlandse stemmen die op het toestel geinstalleerd zijn (Vlaams eerst). */
+        @JavascriptInterface
+        public String stemmen() {
+            JSONArray uit = new JSONArray();
+            if (!ttsKlaar) return uit.toString();
+            try {
+                Set<Voice> alle = tts.getVoices();
+                if (alle == null) return uit.toString();
+                List<Voice> nl = new ArrayList<>();
+                for (Voice v : alle) {
+                    if (v.getLocale() == null || !"nl".equals(v.getLocale().getLanguage())) continue;
+                    Set<String> f = v.getFeatures();
+                    if (f != null && f.contains(TextToSpeech.Engine.KEY_FEATURE_NOT_INSTALLED)) continue;
+                    nl.add(v);
+                }
+                nl.sort((a, b) -> {
+                    int ba = "BE".equals(a.getLocale().getCountry()) ? 0 : 1, bb = "BE".equals(b.getLocale().getCountry()) ? 0 : 1;
+                    if (ba != bb) return ba - bb;
+                    if (a.isNetworkConnectionRequired() != b.isNetworkConnectionRequired()) return a.isNetworkConnectionRequired() ? 1 : -1;
+                    return a.getName().compareTo(b.getName());
+                });
+                for (Voice v : nl) {
+                    JSONObject o = new JSONObject();
+                    o.put("id", v.getName());
+                    o.put("lang", v.getLocale().toLanguageTag());
+                    o.put("net", v.isNetworkConnectionRequired());
+                    uit.put(o);
+                }
+            } catch (Exception ignored) { }
+            return uit.toString();
         }
 
         @JavascriptInterface

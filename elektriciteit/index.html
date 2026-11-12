@@ -263,11 +263,19 @@ pasToe();
 /* ---------- voorlezen ---------- */
 /* In de Android-app (APK) leest Android zelf voor via de brug AndroidTTS. */
 if(window.AndroidTTS){
-  const ss={speak(u){try{AndroidTTS.spreek(u.text,u.rate||1);}catch(e){}},cancel(){try{AndroidTTS.stop();}catch(e){}},resume(){},pause(){},
-    getVoices(){return [{name:'Stem van Android',lang:'nl-BE',default:true,localService:true,voiceURI:'android'}];},addEventListener(){},speaking:false};
+  /* Stemmen van Android: Vlaams en Nederlands, met een eenvoudige naam per stem. */
+  const lijst=()=>{try{if(typeof AndroidTTS.stemmen!=='function')return [];const a=JSON.parse(AndroidTTS.stemmen()||'[]');const tel={};
+      return a.map(v=>{const be=/BE/i.test(v.lang);const k=be?'BE':'NL';tel[k]=(tel[k]||0)+1;return {name:(be?'Vlaamse stem ':'Nederlandse stem ')+tel[k],lang:v.lang,voiceURI:v.id,localService:!v.net,default:false};});}catch(e){return [];}};
+  let cache=[];const luisteraars=[];
+  const ss={speak(u){const id=u.voice&&u.voice.voiceURI||'';try{if(typeof AndroidTTS.spreekMet==='function')AndroidTTS.spreekMet(u.text,u.rate||1,id);else AndroidTTS.spreek(u.text,u.rate||1);}catch(e){try{AndroidTTS.spreek(u.text,u.rate||1);}catch(e2){}}},
+    cancel(){try{AndroidTTS.stop();}catch(e){}},resume(){},pause(){},speaking:false,
+    getVoices(){if(!cache.length)cache=lijst();return cache.length?cache:[{name:'Stem van Android',lang:'nl-BE',voiceURI:'',localService:true,default:true}];},
+    addEventListener(t,f){if(t==='voiceschanged')luisteraars.push(f);}};
   const Utt=function(t){this.text=t;this.lang='nl-BE';this.rate=1;this.voice=null;this.onerror=null;};
   try{Object.defineProperty(window,'speechSynthesis',{configurable:true,writable:true,value:ss});}catch(e){}
   try{Object.defineProperty(window,'SpeechSynthesisUtterance',{configurable:true,writable:true,value:Utt});}catch(e){}
+  /* De stemmen van Android zijn pas na een ogenblik klaar. */
+  let pogingen=0;const kijk=()=>{const l=lijst();if(l.length){cache=l;luisteraars.forEach(f=>{try{f();}catch(e){}});}else if(++pogingen<20)setTimeout(kijk,500);};setTimeout(kijk,300);
 }
 let stemmen=[],alleStemmen=[];
 const kanSpreken=('speechSynthesis' in window)&&('SpeechSynthesisUtterance' in window);
@@ -1484,7 +1492,7 @@ function stemKaart(){
   const v=gekozenStem();
   if(!stemmen.length)h+=`<p>Op dit toestel is (nog) geen Nederlandse stem gevonden.</p><p class="klein">Tik op "Test de stem". Hoor je niets, gebruik dan Microsoft Edge (die heeft Belgische stemmen) of installeer een Nederlandse stem in de taalinstellingen van het toestel.</p>`;
   else h+=`<p class="klein">Kies de stem die je het best verstaat.</p><div class="opties">`+stemmen.map(s2=>`<button class="optie ${v&&v.name===s2.name?'gekozen':''}" data-act="stem" data-n="${esc(s2.name)}" style="flex-direction:column;align-items:flex-start"><b>${esc(s2.name.replace(/Microsoft |Google /,'').replace(/ - .*$/,''))}</b><span class="klein">${/BE/i.test(s2.lang)?'Vlaams (België)':'Nederlands'}${s2.localService?'':' · online'}</span></button>`).join('')+`</div>`;
-  return h+`<div class="knoppen" style="justify-content:flex-start"><button class="knop" data-act="teststem">${SPK} Test de stem</button></div><p class="klein">Geen geluid? Zet het volume van het toestel hoger en kijk of het geluid niet gedempt is.</p></div>`;
+  return h+`<div class="knoppen" style="justify-content:flex-start"><button class="knop" data-act="teststem">${SPK} Test de stem</button></div><p class="klein">Geen geluid? Zet het volume van het toestel hoger en kijk of het geluid niet gedempt is.</p>${window.AndroidTTS?'<p class="klein">Meer stemmen? Open op je toestel <b>Instellingen → Systeem → Talen → Tekst-naar-spraak</b> (de namen verschillen per toestel). Tik op het tandwiel naast de spraakengine, kies <b>Spraakgegevens installeren</b> en dan <b>Nederlands (België)</b> of <b>Nederlands</b>. Sluit daarna de app en open ze opnieuw.</p>':''}</div>`;
 }
 function instellingen(){
   const sw=(k,t,u)=>`<div class="schakel"><div><b>${t}</b><br><span class="klein">${u}</span></div><button class="knop ${S[k]?'vol':''}" data-act="set" data-k="${k}" aria-pressed="${!!S[k]}">${S[k]?'Aan':'Uit'}</button></div>`;
