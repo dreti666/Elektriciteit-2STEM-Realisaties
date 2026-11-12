@@ -1,6 +1,6 @@
-# www.timmyderechter.be
+# timmyderechter.pages.dev
 
-Website met leer-apps voor 2B STEM Realisaties. De app *Elektriciteit stap voor stap* staat in de map `elektriciteit/` en is te vinden op **https://www.timmyderechter.be/elektriciteit/**.
+Website met leer-apps voor 2B STEM Realisaties. De app *Elektriciteit stap voor stap* staat in de map `elektriciteit/` en is te vinden op **https://timmyderechter.pages.dev/elektriciteit/** (gratis gehost via Cloudflare Pages; elke push naar main zet de site automatisch online).
 
 ---
 

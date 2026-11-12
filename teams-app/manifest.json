@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
   "manifestVersion": "1.16",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "id": "43090de1-ec5e-5c83-8816-dbce3b3d7dfe",
   "developer": {
     "name": "Timmy De Rechter, St.-Jozefinstituut Schoten",
-    "websiteUrl": "https://www.timmyderechter.be/",
-    "privacyUrl": "https://www.timmyderechter.be/",
-    "termsOfUseUrl": "https://www.timmyderechter.be/"
+    "websiteUrl": "https://timmyderechter.pages.dev/",
+    "privacyUrl": "https://timmyderechter.pages.dev/",
+    "termsOfUseUrl": "https://timmyderechter.pages.dev/"
   },
   "name": {
     "short": "Elektriciteit",
@@ -26,14 +26,14 @@
     {
       "entityId": "elektriciteit",
       "name": "Elektriciteit",
-      "contentUrl": "https://www.timmyderechter.be/elektriciteit/",
-      "websiteUrl": "https://www.timmyderechter.be/elektriciteit/",
+      "contentUrl": "https://timmyderechter.pages.dev/elektriciteit/",
+      "websiteUrl": "https://timmyderechter.pages.dev/elektriciteit/",
       "scopes": [
         "personal"
       ]
     }
   ],
   "validDomains": [
-    "www.timmyderechter.be"
+    "timmyderechter.pages.dev"
   ]
 }
