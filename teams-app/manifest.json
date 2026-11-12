@@ -1,10 +1,10 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
   "manifestVersion": "1.16",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "id": "43090de1-ec5e-5c83-8816-dbce3b3d7dfe",
   "developer": {
-    "name": "Timmy De Rechter, St.-Jozefinstituut Schoten",
+    "name": "Timmy De Rechter",
     "websiteUrl": "https://timmyderechter.pages.dev/",
     "privacyUrl": "https://timmyderechter.pages.dev/",
     "termsOfUseUrl": "https://timmyderechter.pages.dev/"
